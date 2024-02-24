@@ -374,43 +374,30 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('.btn2.select2').hide();
   $('.btn3.select3').hide();
+  $("#web-plan2").hide();
+  $('#asics').hide();
   $('.web-1').click(function() {
     $('#sculptor').show();
     $('#asics').hide();
-    $('#mangosix').hide();
     $(".web-1").addClass('active');
     $(".web-2 a").css('backgroundColor','transparent');
-    $(".web-3 a").css('backgroundColor','transparent');
     $(".web-2").css('color','white');
     $('.btn1.select1').show();
     $('.btn2.select2').hide();
-    $('.btn3.select3').hide();
+    $("#web-plan").show();
+    $("#web-plan2").hide();
   });
   $('.web-2').click(function() {
     $('#asics').show();
     $('#sculptor').hide();
-    $('#mangosix').hide();
     $(".web-2 a").css({
       backgroundColor : '#5a72b3',  
     });
     $(".web-1").removeClass('active');
-    $(".web-3 a").css('backgroundColor','transparent');
     $('.btn2.select2').show();
     $('.btn1.select1').hide();
-    $('.btn3.select3').hide();
-  });
-  $('.web-3').click(function() {
-    $('#mangosix').show();
-    $('#sculptor').hide();
-    $('#ascis').hide();
-    $(".web-3 a").css({
-      backgroundColor : '#5a72b3',  
-    });
-    $(".web-2 a").css('backgroundColor','transparent');
-    $(".web-1").removeClass('active');
-    $('.btn3.select3').show();
-    $('.btn1.select1').hide();
-    $('.btn2.select2').hide();
+    $("#web-plan2").show();
+    $("#web-plan").hide();
   });
 });
 

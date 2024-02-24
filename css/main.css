@@ -5,6 +5,7 @@ a { text-decoration: none; }
 /* - 상단 고정 네비게이션 */
 body { 
     margin: 0 auto; 
+    font-family: 'Pretendard',sans-serif;
 }
 #nav, #navigation {list-style: none;}
 #top-nav {
@@ -23,9 +24,9 @@ body {
     display: flex; 
     align-items: center;
 }
-#logo img { width: 100%; height: auto;}
-#logo a { padding-left: 15px; padding-top: 3px;}
-#nav a { align-items: center; color: #333;}
+#logo > a > img { width: 100%; height: auto;}
+#logo > a { padding-left: 15px; padding-top: 3px;}
+#nav > ul > li > a { align-items: center; color: #333;}
 #nav > ul {
     list-style: none;
     display: flex; width: 100%; /* 너비를 100%로 설정하여 가로 스크롤 없애가 */
@@ -47,8 +48,6 @@ body {
 /* 퀵 네비게이션 */
 #utility { 
     margin: 0;
-    width: 20%; height: 100%;
-    position: fixed; right: 0;
     z-index: 10;
 }   
 .menuBtn {
@@ -57,31 +56,29 @@ body {
     z-index: 12;
     cursor: pointer;
 }
-
-.menuBtn span {
+.menuBtn > span {
     position: absolute;
     height: 5px;
     border-radius: 4px;
     width: 100%;
     background-color: #fff; top: 0;
 }
-
-.menuBtn span:nth-child(1) { top: 0;}
-.menuBtn span:nth-child(2), .menuBtn span:nth-child(3) { top: 13px;}
-.menuBtn span:nth-child(4) { top: 26px;}
-.menuBtn.active span:nth-child(1),
-.menuBtn.active span:nth-child(4) { opacity: 0;}
-.menuBtn.active span:nth-child(2) {
+.menuBtn > span:nth-child(1) { top: 0;}
+.menuBtn > span:nth-child(2), .menuBtn > span:nth-child(3) { top: 13px;}
+.menuBtn > span:nth-child(4) { top: 26px;}
+.menuBtn.active > span:nth-child(1),
+.menuBtn.active > span:nth-child(4) { opacity: 0;}
+.menuBtn.active > span:nth-child(2) {
     transform: rotate(45deg);
 }
-.menuBtn.active span:nth-child(3) {
+.menuBtn.active > span:nth-child(3) {
     transform: rotate(-45deg);
 }
 #navigation {
     position: fixed; background: rgba(0, 0, 0, 0.6);
     top: 0; right: 0; width: 20%; height: 100vh;
     opacity: 0; visibility: hidden;
-    transition: 0.3s; z-index: 3;
+    transition: 0.3s; z-index: 9;
 }
 #navigation > ul {
     padding: 0;
@@ -205,7 +202,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
     transition: font-size 0.7s ease;
 }
-#portfolio-left div {display: flex; }
+#portfolio-left > div {display: flex; }
 .num { 
     position: absolute; 
     font-size: 3rem; font-style: oblique;
@@ -257,7 +254,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     text-align: right; line-height: 130%;
     transition: font-size 0.6s ease;
 }
-.introduce span {
+.introduce > p > span {
     font-family: 'Pretendard', sans-serif;
     font-size: 1.5rem; font-weight: 400;
     transition: font-size 0.6s ease;
@@ -306,6 +303,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     display: flex;
+    /* font-family: 'Pretendard',sans-serif; */
 }
 .folder-profile:hover + .profile-box {
     display: block; opacity: 1;
@@ -320,7 +318,9 @@ svg { transition: width 0.7s ease; z-index: 1;}
 }
 .profile-icon > a { cursor: pointer; padding-right: 5px;}
 .profile {
-    display: flex; flex-direction: column; align-items: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
 }
 .profile-img {  padding-left: 10%;}
 .profile-txt { 
@@ -372,15 +372,15 @@ svg { transition: width 0.7s ease; z-index: 1;}
     padding-left: 5%; 
     color: #fff;
 }
-#pf-right h2 { font-family: 'Libre Baskerville', serif; font-size: 2.1rem;}
-#pf-right ul { padding-top: 5%; padding-left: 3%; font-size: 1.4rem; list-style: none; }
+#pf-right > div > h2 { font-family: 'Libre Baskerville', serif; font-size: 2.1rem;}
+#pf-right > div > ul { padding-top: 5%; padding-left: 3%; font-size: 1.4rem; list-style: none; }
 #pf-right div { padding-top: 0; line-height: 150%;}
 .education { margin-top: 8%;}
 .education span { display: inline-block; width: 200px;}
 .education ul li {white-space: nowrap; line-height: 170%;}
 .license { margin-top: 8%;}
-.license span { display: inline-block; width: 110px;}
-.license ul li {line-height: 170%;}
+.license > ul > li > span { display: inline-block; width: 110px;}
+.licens > ul > li {line-height: 170%;}
 
 /* SW SKILLS */
 .skills { margin-top: 8%;}
@@ -565,8 +565,8 @@ svg { transition: width 0.7s ease; z-index: 1;}
     height: 100%;
 }
 .hello > h1 { padding-top: 10%; padding-left: 10%; font-size: 2.6rem;}
-.hello span {color: #00eff2; font-size: 1.8rem;}
-.hello > p{ 
+.hello > p > span {color: #00eff2; font-size: 1.8rem;}
+.hello > p { 
     /* padding-left: 8%;  */
     padding-top: 5%; 
     font-size: 1.5rem; 
@@ -601,7 +601,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
 }
 .exp-txt > ul { list-style: none; padding-top: 3%;}
 .exp-txt > ul > li {padding-top: 2%;}
-.exp-txt span {display: inline-block; width: 150px; padding-left: 5%; margin-right: 5%;}
+.exp-txt > ul > li > span {display: inline-block; width: 150px; padding-left: 5%; margin-right: 5%;}
 .ability {margin-top: 20%;}
 .ability-title {
     width: 100%;
@@ -631,7 +631,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     padding-left: 5%; 
 }
 .ability-txt > p { padding-top: 5%; white-space: nowrap;}
-.ability span { color: #00eff2; font-size: 1.7rem;}
+.ability > div > p > span { color: #00eff2; font-size: 1.7rem;}
 #line2 { 
     width: 10%; height: 10%;
     display: inline-block; 
@@ -648,21 +648,21 @@ svg { transition: width 0.7s ease; z-index: 1;}
     display: flex;
     overflow: hidden;
 }
-#web-plan {
+#web-plan, #web-plan2 {
     width: 38%;
     color: #fff; font-family: 'Pretendard', sans-serif;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
 }
-#folder-web {
+#folder-web, #folder-web2 {
     padding-left: 10%; padding-top: 7%;
     width: 60%; height: 10%;
     display: flex; align-items: center; justify-content: center;
 }
-#folder-web > h3 {
+#folder-web > h3, #folder-web2 > h3 {
     padding-left: 4%;
     font-size: 1.7em;
 }
-#folder-web > img { width: 10%; height: auto; padding-left: 5%;}
+#folder-web > img, #folder-web2 > img { width: 10%; height: auto; padding-left: 5%;}
 #folder-web::after {
     content: ''; display: inline-block;
     width: 215px; height: 55px; 
@@ -671,86 +671,109 @@ svg { transition: width 0.7s ease; z-index: 1;}
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
     transform: translateX(-85%);
 }
-#title { 
+#folder-web2::after {
+    content: ''; display: inline-block;
+    width: 215px; height: 55px; 
+    border: 1.5px solid #fff; 
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    transform: translateX(-85%);
+}
+#title, #title2 { 
     padding: 7%;
     padding-left: 10%;
     font-size: 3rem;
     white-space: nowrap;
 }
-#tool {
+#tool, #tool2 {
     display: flex; 
     align-items: center;
     padding-left: 12%;
     padding-top: 3%;
 }
-#tool > h3 { 
+#tool > h3, #tool2 > h3 { 
     font-size: 2rem; 
 }
-.tool-img > img {width: 30%; height: auto; padding-left: 4%;}
-.tool-img {
+.tool-img > img, .tool-img2 > img {width: 30%; height: auto; padding-left: 4%;}
+.tool-img, .tool-img2 {
     display: flex;
     padding-left: 10%;
 }
-#purpose {
+#purpose, #purpose2 {
     padding-left: 12%; padding-top: 13%;
     white-space: nowrap;
 } 
-#purpose > h3 { font-size: 2em; padding-bottom: 5%; }
-#purpose > p { font-size: 1.3rem; line-height: 170%; }
-#colors {
+#purpose > h3, #purpose2 > h3 { font-size: 2em; padding-bottom: 5%; }
+#purpose > p, #purpose2 > p { font-size: 1.3rem; line-height: 170%; }
+#colors, #colors2 {
     /* width: 100px; */
     padding-left: 12%; padding-top: 15%;
     display: flex; 
     align-items: center;
     position: relative;
 }
-#colors > h3{
+#colors > h3, #colors2 > h3{
     font-size: 2rem;
     /* padding-top: 3%; */
 }
-.icon-container { 
+.icon-container, .icon-container2 { 
     margin-left: 10%; width: 100px; 
     height: 50px;
     position: relative;
 }
-.icon-container span {
-    /* width: 100px; */ 
-    /* float: left; */
+.icon-container > span, .icon-container2 > span {
+    width: 40px;
+    height: 40px;
     display: flex;
     margin-right: 50px; /* 아이콘 사이의 간격을 조절 */
 }
-.circle-black { 
-    position: absolute; left: 10px; top: 10px;
-    width: 33px; height: 33px; border-radius: 50%;
+.circle-black, .circle-black2 { 
+    position: absolute; left: 0; top: 10px;
+    border-radius: 50%;
     background-color: #000; 
 }
 .circle-pink { 
-    position: absolute; left: 50px; top: 10px;
-    width: 35px; height: 35px; border-radius: 50%;
+    position: absolute; 
+    left: 60px; top: 10px;
+    border-radius: 50%;
     background-color: #cc5590;; 
 }
+.circle-blue { 
+    position: absolute; 
+    left: 60px; top: 10px;
+    border-radius: 50%;
+    background-color: #0d3272;; 
+}
 .circle-purple { 
-    position: absolute; left: 90px; top: 10px;
-    width: 35px; height: 35px; border-radius: 50%;
+    position: absolute; 
+    left: 120px; top: 10px;
+    border-radius: 50%;
     background-color: #37428a; 
 }
-.circle-white { 
-    position: absolute; left: 130px; top: 10px;
-    width: 35px; height: 35px; border-radius: 50%;
+.circle-gray { 
+    position: absolute; 
+    left: 120px; top: 10px;
+    border-radius: 50%;
+    background-color: #b8bfb5; 
+}
+.circle-white, .circle-white2 { 
+    position: absolute; 
+    left: 180px; top: 10px;
+    border-radius: 50%;
     background-color: #fff; 
 }
-
 #web-view {
     width: 62%; height: 100%; 
     color: #fff;
     overflow-x: hidden;
 }
 #web-nav {
-    padding-top: 5%; padding-left: 20%;
+    padding-top: 5%; 
+    padding-left: 30%;
 }
 #web-nav > ul {
     list-style: none;
-    font-size: 1.7rem; 
+    font-size: 1.6rem; 
     display: flex; align-items: center;
     white-space: nowrap;
 }
@@ -765,7 +788,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
 }
 #web-nav li::after {
     content: "|";
-    margin: 15px;
+    margin: 25px;
     color: #fff;
 }
 #web-view .active a {
@@ -781,8 +804,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
     position: relative;
 }
 #sculptor {
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%;
+    position: absolute; 
+    top: 0; left: 0;
+    width: 100%; 
+    height: 100%;
 }
 #sculptor-tablet { 
     position: absolute; top: 60%;
@@ -794,7 +819,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
 }
 #sculptor-tesktop > img { position: relative; width: 100%; height: auto;}
 .web-tooltip1 {
-    visibility: hidden; width: 60%;
+    visibility: hidden; width: 50%;
     background-color: rgba(0, 0, 0, 0.8); color: #fff;
     text-align: center;
     font-size: 1.4em; font-family: 'Pretendard',sans-serif;
@@ -814,7 +839,36 @@ svg { transition: width 0.7s ease; z-index: 1;}
 }
 #sculptor-tablet > img { width: 90%; height: auto;}
 #sculptor-mobile > img { width: 100%; height: auto;}
-
+#asics {
+    position: absolute; 
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+}
+#asics-tesktop {
+    position: absolute;
+    left: 18%;
+    top: 10%;
+}
+.web-tooltip2 {
+    visibility: hidden; 
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #fff;
+    text-align: center;
+    font-size: 1.4em; 
+    font-family: 'Pretendard',sans-serif;
+    border-radius: 5px; 
+    padding: 5px;
+    position: absolute; top: 45%; left: 35%;
+    z-index: 3; opacity: 0;
+    transform: translate(-35%,-45%);
+    transition: opacity 0.3s;
+}
+#asics:hover .web-tooltip2 {
+    visibility: visible;
+    opacity: 1;
+}
 .btn1 {
     margin-top: 10%;
     display: flex; align-items: center;
@@ -823,7 +877,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
 .btn1 a {
     text-decoration: none; 
     color: #fff; font-size: 1.8em;
-    margin-right: 5%;
+    margin-left: 5%;
     cursor: pointer;
     padding: 7px 7px 7px;
     border: 1px solid #fff; text-align: center;
@@ -837,27 +891,12 @@ svg { transition: width 0.7s ease; z-index: 1;}
 .btn2 a {
     text-decoration: none; 
     color: #fff; font-size: 1.8rem;
-    margin-right: 5%;
+    margin-left: 5%;
     cursor: pointer;
     padding: 7px 7px 7px;
     border: 1px solid #fff; text-align: center;
 }
 .select2 a:hover {background-color: #fff; color: #000;}
-.btn3 {
-    margin-top: 10%;
-    display: flex; align-items: center;
-    justify-content: center;
-}
-.btn3 a {
-    text-decoration: none; 
-    color: #fff; font-size: 1.8rem;
-    margin-right: 5%;
-    cursor: pointer;
-    padding: 7px 7px 7px;
-    border: 1px solid #fff; text-align: center;
-}
-.select3 a:hover {background-color: #fff; color: #000;}
-
 
 /* 5.이모티콘 페이지 영역 */
 #emoticon {
@@ -886,6 +925,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     width: 20%;
     position: absolute; left: 48%; bottom: -50%; z-index: 10;
     transition: all 2.5s ease-out;
+    z-index: 8;
 }
 #emoticon-img3 > img {
     width: 100%; height: auto;
@@ -1068,17 +1108,17 @@ svg { transition: width 0.7s ease; z-index: 1;}
     z-index: 10; margin-right: 1%;
     font-family: 'Pretendard', sans-serif;
 }
-.plan-txt li::marker {
+.plan-txt > ul > li::marker {
     content: "\25A0"; /* 네모상자 문자 사용 */
     color: #333; /* 네모상자 색상 설정 */
     margin-right: 20px; /* 네모상자와 텍스트 사이 간격 설정 */
     margin-bottom: 20px;
     font-size: 12px;
 }
-.plan-txt h3 {padding-left: 2%;font-size: 1.8em;}
-.plan-txt ul{padding-left: 7%;}
-.plan-txt li{ padding-bottom: 12%;}
-.plan-txt ul li p {font-size: 1.5rem; line-height: 150%; padding-top: 3%;}
+.plan-txt > ul > li > h3 {padding-left: 2%;font-size: 1.8em;}
+.plan-txt > ul{padding-left: 7%;}
+.plan-txt > li{ padding-bottom: 12%;}
+.plan-txt > ul > li > p {font-size: 1.5rem; line-height: 150%; padding-top: 3%;}
 
 #personal-design {
     width: 60%; 
@@ -1516,6 +1556,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
 .close7 {
     position: absolute; top: 5%; right: 10%;
     font-size: 5em; cursor: pointer; color: #fff;
+    z-index: 10;
 }
 .close7:hover {color: #b8b8b8a5;}
 
@@ -1648,7 +1689,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     width: 100%; height: 50%; padding-top: 0;
     display: flex; position: relative;
 }
-.card-top p{
+.card-top > p{
     font-family: 'Pretendard',sans-serif;
     font-size: 3em; color: #333;
     padding-left: 7%;
@@ -1657,16 +1698,16 @@ svg { transition: width 0.7s ease; z-index: 1;}
     font-weight: bold;
     white-space: nowrap;
 }
-.card-top span {display: block; line-height: 60%; font-size: 0.6em; }
-.card-top img { display: block; position: absolute; left: 40%; top: -6%;}
+.card-top > p > span {display: block; line-height: 60%; font-size: 0.6em; }
+.card-top > img { display: block; position: absolute; left: 40%; top: -6%;}
 .card-bottom {
     width: 100%; height: 50%;
     z-index: 8; 
 }
-.card-bottom ul{
+.card-bottom > ul{
     width: 400px; padding-left: 300px;
 }
-.card-bottom li {
+.card-bottom > ul > li {
     font-family: 'Pretendard',sans-serif;
     font-size: 1.4em; color: #333;
     font-weight: 550; list-style: none;
@@ -1709,6 +1750,14 @@ svg { transition: width 0.7s ease; z-index: 1;}
 }
 
 /* 반응형 */
+@media screen and (max-width:1680px) {
+    .light {
+        margin-top: -30%;
+    }
+    #asics-tesktop {
+        left: 12%;
+    }
+}
 @media screen and (max-width:1640px) {
     .tamburinse {
         width: 450px;
@@ -1762,11 +1811,16 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .travel-top p {
         margin-left: 150px;
     }
-}
-@media screen and (max-width:1640px) {
-    .card-top img {
+    .card-top > img {
         left: 55%;
     }
+    #asics-tesktop > img { 
+        /* position: relative;  */
+        padding-top: 6%;
+        width: 850px; 
+        height: auto;
+    }
+    
 }
 @media screen and (max-width:1440px) {
     #navigation > ul > li {
@@ -1783,7 +1837,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #profile {
         height: 1080px;
     }
-    #pf-right h2 {
+    #pf-right > div > h2 {
         font-size: 1.9rem;
     }
     .profile-txt {
@@ -1811,7 +1865,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
         padding-left: 0;
         font-size: 1.3rem;
     }
-    .hello span {
+    .hello > p > span {
         font-size: 1.6rem;
     }
     #ab-right {
@@ -1821,35 +1875,35 @@ svg { transition: width 0.7s ease; z-index: 1;}
         font-size: 1.3rem;
         white-space: nowrap;
     }
-    .exp-txt span {
+    .exp-txt > ul > li > span {
         width: 130px;
         margin-right: 3%;
     }
     .ability-txt {
         font-size: 1.3rem;
     }
-    .ability span {
+    .ability > div > p > span {
         font-size: 1.5rem;
     }
-    #folder-web {
-        width: 55%;
+    #folder-web, #folder-web2{
+        width: 60%;
     }
-    #web-plan {
+    #web-plan, #web-plan2 {
         width: 45%;
     }
     #tool {
         padding-left: 10%;
     }
-    #purpose {
+    #purpose, #purpose2 {
         padding-left: 10%;
     }
-    #colors {
+    #colors, #colors2 {
         padding-left: 10%;
     }
     #web-nav {
         padding-top: 8%;
     }
-    #purpose > p {
+    #purpose > p, #purpose2 > p {
         font-size: 1.3rem;
     }
     #web-nav > ul {
@@ -1866,6 +1920,12 @@ svg { transition: width 0.7s ease; z-index: 1;}
     }
     #sculptor-mobile {
         top: 55%;
+    }
+    #asics-tesktop > img { 
+        /* position: relative;  */
+        padding-top: 10%;
+        width: 700px; 
+        height: auto;
     }
     .folder-emoticon::after {
         width: 45%;
@@ -1959,7 +2019,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .travel-top p {
         margin-left: 150px;
     }
-    .card-top img {
+    .card-top > img {
         left: 60%;
     }
 }
@@ -2068,6 +2128,40 @@ svg { transition: width 0.7s ease; z-index: 1;}
         padding-top: 8%;
     }
 }
+@media screen and (max-width:1280px) {
+    #title, #title2 {
+        font-size: 2.5rem;
+    }
+    #tool > h3, #tool2 > h3 {
+        font-size: 1.8rem;
+    }
+    #purpose > h3, #purpose2 > h3 {
+        font-size: 1.7em;
+        padding-bottom: 5%;
+    }
+    #purpose > p, #purpose2 > p {
+        font-size: 1.1rem;
+    }
+    #colors > h3, #colors2 > h3 {
+        font-size: 1.8rem;
+    }
+    #asics-tesktop {
+        left: 17%;
+    }
+    .icon-container > span, .icon-container2 > span {
+        width: 35px;
+        height: 35px;
+    }
+    .circle-pink, .circle-blue {
+        left: 55px;
+    }
+    .circle-purple, .circle-gray {
+        left: 110px;
+    }
+    .circle-white, .circle-white2 {
+        left: 165px;
+    }
+}
 @media screen and (max-width:1200px) {
     .personal-txt {
         width: 80%;
@@ -2075,9 +2169,6 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .profile-txt > ul > li  {
         font-size: 1.5rem;
     }
-    /* #utility {
-        display: none;
-    } */
     .education span {
         width: 175px;
     }
@@ -2106,7 +2197,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
         text-align: left;
         font-size: 1.7rem;
     }
-    .introduce span {
+    .introduce > p > span {
         font-size: 1.3rem;
     }
     .search-left > p {
@@ -2121,7 +2212,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #pf-right {
         width: 55%;
     }
-    #pf-right ul {
+    #pf-right > div > ul {
         font-size: 1.3rem;
     }
     .profile-img > img {
@@ -2139,7 +2230,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .ability-title > p {
         font-size: 1.8rem;
     }
-    .hello span {
+    .hello > p > span {
         font-size: 1.3rem;
     }
     .hello > p {
@@ -2149,7 +2240,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .exp-txt {
         font-size: 1rem;
     }
-    .exp-txt span {
+    .exp-txt > ul > li > span {
         font-size: 1rem;
     }
     #ability-content {
@@ -2158,10 +2249,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .ability-txt {
         font-size: 1rem;
     }
-    .ability span {
+    .ability > div > p > span {
         font-size: 1.1rem;
     }
-    #purpose > p {
+    #purpose > p, #purpose2 > p {
         font-size: 1.1rem;
     }
     #folder-graphic::after {
@@ -2171,8 +2262,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
         height: 1000px;
     }
     #web-nav {
-        padding-top: 20%;
-        padding-left: 5%;
+        padding-left: 20%;
     }
     #sculptor {
         height: 100%;
@@ -2180,14 +2270,23 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #web-img {
         height: 60%;
     }
-    #title {
+    #title, #title2 {
         font-size: 2.5rem;
     }
-    #web-plan {
+    #web-plan, #web-plan2 {
         width: 55%;
     }
     #web-nav > ul {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
+    }
+    #asics-tesktop {
+        left: 15%;
+    }
+    #asics-tesktop > img { 
+        /* position: relative;  */
+        padding-top: 10%;
+        width: 600px; 
+        height: auto;
     }
     .btn1, .btn2, .btn3 {
         margin-top: 5%;
@@ -2217,10 +2316,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .card-top {
         height: 40%;
     }
-    .card-bottom ul {
+    .card-bottom > ul {
         padding-left: 270px;
     }
-    .card-top img {
+    .card-top > img {
         width: 180px;
     }
 }
@@ -2228,7 +2327,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .personal-txt {
         width: 90%;
     }
-    #pf-right ul {
+    #pf-right > div > ul {
         font-size: 1.1rem;
     }
 }
@@ -2236,23 +2335,19 @@ svg { transition: width 0.7s ease; z-index: 1;}
 @media screen and (max-width:1024px) {
     .menuBtn {
         /* top: 6%; */
-        width: 4%;
+        width: 5%;
     }
-    /* #utility {
-        width: 100%;
-    } */
-    
     #navigation {
         width: 30%;
         height: 100vh;
     }
-    #navigation > ul > li {
-        /* margin-bottom: 15%; */
-        height: 100px;
-        line-height: 100px;
-    }
+    /* #navigation > ul > li {
+        margin-bottom: 15%;
+        height: 150px;
+        line-height: 150px;
+    } */
     #navigation > ul > li > a{
-        font-size: 1.7rem;
+        font-size: 1.9rem;
     }
     #vertical-txt1 {
         font-size: 1.3rem;
@@ -2295,12 +2390,9 @@ svg { transition: width 0.7s ease; z-index: 1;}
         font-size: 1.5rem;
         text-align: left;
     }
-    .introduce span {
+    .introduce > p > span {
         font-size: 1.1rem;
     }
-    /* .uiux {
-        padding-left: 50%;
-    } */
     /* 프로필 페이지 */
     #vertical-txt2 {
         font-size: 1.3rem;
@@ -2330,10 +2422,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
         width: 55%;
         padding-left: 50px;
     }
-    #pf-right h2 {
+    #pf-right > div > h2 {
         font-size: 1.6rem;
     }
-    #pf-right ul {
+    #pf-right > div > ul {
         font-size: 1.15rem;
         white-space: nowrap;
         padding-left: 2%;
@@ -2364,7 +2456,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .skill-bar2 {
         width: 140px;
     } 
-    .search-left img {
+    .search-left > img {
         width: 20px;
     }
     /* 개인 역량 페이지 */
@@ -2412,7 +2504,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
         font-size: 0.8rem;
         line-height: 35px;
     }
-    .hello span {
+    .hello > p > span {
         font-size: 1rem;
     }
     .experience-title > p{
@@ -2425,7 +2517,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .exp-txt > ul {
         padding-top: 5%;
     }
-    .exp-txt span {
+    .exp-txt > ul > li > span {
         width: 100px;
         font-size: 0.9rem;
         margin-right: 1%;
@@ -2433,7 +2525,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .ability {
         margin-top: 30%;
     }
-    .ability span {
+    .ability > div > p > span {
         font-size: 1rem;
     }
     .ability-title > p {
@@ -2450,49 +2542,48 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #web-pf {
         height: 900px;
     }
-    #folder-web {
+    #folder-web, #folder-web2 {
         width: 80%;
     }
-    #folder-web::after {
+    #folder-web::after, #folder-web2::after {
         height: 40px;
     }
-    #folder-web > h3 {
+    #folder-web > h3 , #folder-web2 > h3{
         padding-left: 7%;
         font-size: 1.4rem;
     }
-    #web-plan {
-        width: 45%;
+    #web-plan, #web-plan2 {
+        width: 50%;
     }
-    #title {
+    #title, #title2 {
         font-size: 2rem;
         margin-top: 5%;
     }
-    #tool { padding-left: 10%;}
-    #tool > h3 {
+    #tool, #tool2 { padding-left: 10%;}
+    #tool > h3, #tool2 > h3 {
         font-size: 1.5rem;
     }
-    .tool-img img {
+    .tool-img > img, .tool-img2 > img{
         width: 25%;
     }
-    #purpose { padding-top: 20%; padding-left: 10%;}
-    #purpose > h3 {
+    #purpose, #purpose2 { padding-top: 20%; padding-left: 10%;}
+    #purpose > h3, #purpose2 > h3 {
         font-size: 1.5rem;
     }
-    #purpose > p {
+    #purpose > p, #purpose2 > p {
         font-size: 0.95rem;
         line-height: 180%;
     }
-    #colors { padding-top: 20%; padding-left: 10%;}
-    #colors > h3 {
+    #colors, #colors2 { padding-top: 20%; padding-left: 10%;}
+    #colors > h3, #colors2 > h3 {
         font-size: 1.5rem;
     }
-    .icon-container span  {
+    .icon-container > span, .icon-container2 > span  {
         width: 30px; height: 30px;
     }
-    #web-nav {
-        padding-top: 18%;
-        padding-left: 3%;
-    }
+    /* #web-nav {
+        padding-top: 15%;
+    } */
     #web-nav > ul {
         font-size: 1.1rem;
     }
@@ -2514,6 +2605,12 @@ svg { transition: width 0.7s ease; z-index: 1;}
     }
     #sculptor-mobile > img {
         width: 110%;
+    }
+    #asics-tesktop > img { 
+        /* position: relative;  */
+        padding-top: 10%;
+        width: 570px; 
+        height: auto;
     }
     .btn1, .btn2, .btn3 a {
         margin-top: 10%;
@@ -2607,13 +2704,13 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .personal-txt {
         width: 65%;
     }
-    .plan-txt ul li {
+    .plan-txt > ul > li {
         padding-bottom: 15%;
     }
-    .plan-txt ul li p {
+    .plan-txt > ul > li > p {
         font-size: 1.1rem;
     }
-    .plan-txt h3 {
+    .plan-txt > ul > li > h3 {
         font-size: 1.5rem;
     }
     .personal-txt {
@@ -2740,16 +2837,6 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .tamb-container img {
         padding-top: 0;
     }
-    /* .youtube-container {
-        width: 60%;
-        top: 20%; 
-        transform: translate(-50%,-20%);
-    } */
-    .loopy-container {
-        width: 80%;
-        top: 30%;
-        transform: translate(-50%,-30%);
-    }
     .close5{ 
         right: 10%;
     }
@@ -2780,16 +2867,16 @@ svg { transition: width 0.7s ease; z-index: 1;}
         margin-top: 19%;
         /* background-size: 800px auto; */
     }
-    .card-bottom li {
-        font-size: 1.5rem;
-    }
     .card-top {
         height: 60%;
     }
-    .card-bottom ul {
+    .card-bottom > ul {
         padding-left: 400px;
     }
-    .card-top img {
+    .card-bottom > ul > li {
+        font-size: 1.5rem;
+    }
+    .card-top > img {
         left: 50%;
         width: 250px;
     }
@@ -2800,10 +2887,35 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .contact-txt h1 {
         font-size: 1.3em;
     }
-}
-@media screen and (max-width:1024px) {
-    #pf-right ul {
+    #pf-right > div > ul {
         font-size: 1rem;
+    }
+    .slider-container {
+        width: 60%;
+    }
+    .package-container {
+        top: 40%;
+        transform: translate(-50%,-40%);
+    }
+    .app-container {
+        top: 50%;
+    }
+    .tamb-container {
+        width: 80%;
+    }
+    .youtube-container {
+        width: 70%;
+    }
+    .toocool-container {
+        top: 35%;
+        width: 70%;
+    }
+    .loopy-container {
+        width: 80%;
+        top: 40%;
+    }
+    .travel-container {
+        width: 70%;
     }
 }
 @media screen and (max-width: 930px) {
@@ -2828,7 +2940,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .profile {
         padding-top: 20%;
     }
-    #pf-right ul {
+    #pf-right > div > ul {
         padding-left: 0;
     }
     .profile-txt {
@@ -2851,24 +2963,51 @@ svg { transition: width 0.7s ease; z-index: 1;}
         line-height: 35px;
         font-size: 0.85rem;
     }
-    .hello span {
+    .hello > p > span {
         font-size: 1rem;
     }
     .exp-txt {
         font-size: 0.9rem;
     }
-    .exp-txt span {
+    .exp-txt > ul > li > span {
         width: 95px;
         font-size: 0.9rem;
     }
     .ability-txt {
         font-size: 0.85rem;
     }
-    .ability span {
+    .ability > div > p > span {
         font-size: 0.95rem;
     }
     #line2 {
         right: 5%;
+    }
+    #asics-tesktop {
+        left: 25%;
+    }
+    #asics-tesktop {
+        left: 25%;
+    }
+}
+@media screen and (max-width: 912px) {
+    #web-plan, #web-plan2 {
+        width: 62%;
+    }
+    #web-nav {
+        padding-left: 10%;
+        padding-top: 25%;
+    }
+    #web-img {
+        margin-top: 4%;
+    }
+    #asics-tesktop {
+        left: 6%;
+    }
+    #asics-tesktop > img {
+        width: 540px;
+    }
+    .btn1, .btn2, .btn3 a {
+        margin-top: 5%;
     }
 }
 @media screen and (max-width: 900px) {
@@ -2927,10 +3066,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .introduce {
         padding-top: 90%;
     }
-    .introduce p {
+    .introduce > p {
         font-size: 1.5rem;
     }
-    .introduce span {
+    .introduce > p > span {
         font-size: 1.05rem;
     }
     #profile {
@@ -2976,11 +3115,11 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #ab-right {
         width: 50%;
     }
-    .hello p {
+    .hello > p {
         font-size: 0.75rem;
         line-height: 30px;
     }
-    .hello span {
+    .hello > p > span {
         font-size: 0.95rem;
     }
     .profile-img {
@@ -3017,7 +3156,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .exp-txt {
         font-size: 0.75rem;
     }
-    .exp-txt span {
+    .exp-txt > ul > li > span {
         width: 80px;
         font-size: 0.75rem;
     }
@@ -3035,7 +3174,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .ability-txt {
         font-size: 0.75rem;
     }
-    .ability span {
+    .ability > div > p > span {
         font-size: 0.85rem;
     }
     .ability {
@@ -3044,7 +3183,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #line2 {
         right: 4%;
     }
-    #folder-web {
+    #folder-web, #folder-web2 {
         width: 119%;
     }
     .folder-emoticon {
@@ -3059,10 +3198,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .emoticon-about {
         padding-top: 70%;
     }
-    #purpose {
+    #purpose, #purpose2 {
         padding-top: 5%;
     }
-    #purpose > p {
+    #purpose > p, #purpose2 > p {
         font-size: 1.2rem;
         line-height: 200%;
     }
@@ -3071,59 +3210,55 @@ svg { transition: width 0.7s ease; z-index: 1;}
         height: 1500px;
         background-size: auto 1500px;
     }
-    #web-plan {
+    #web-plan, #web-plan2 {
         width: 100%;
         height: 55%;
     }
-    #folder-web {
+    #folder-web, #folder-web2 {
         width: 35%;
         padding-top: 5%;
     }
     #web-view {
         height: 50%;
     }
-    #title {
+    #title, #title2 {
         padding: 0;
         padding-left: 9%;
         font-size: 2.5rem;
         margin-top: 3%;
     }
-    #folder-web > h3 {
+    #folder-web > h3, #folder-web2 > h3 {
         font-size: 1.2rem;
     }
-    #tool {
+    #tool, #tool2 {
         padding-top: 6%;
     }
-    #tool > h3 {
+    #tool > h3, #tool2 > h3 {
         font-size: 2rem;
     }
-    .tool-img img {
+    .tool-img > img, .tool-img2 > img {
         width: 30%;
     }
-    #purpose {
+    #purpose, #purpose2 {
         padding-top: 7%;
     }
-    #purpose > h3 {
+    #purpose > h3, #purpose2 > h3 {
         font-size: 1.7rem;
         padding-bottom: 2%;
     }
-    #folder-web > img {
+    #folder-web > img, #folder-web2 > img{
         width: 9%;
     }
-    #colors {
+    #colors, #colors2 {
         padding-top: 6%;
         padding-bottom: 2%;
     }
-    #colors > h3 {
+    #colors > h3, #colors2 > h3 {
         font-size: 1.7rem;
     }
-    .icon-container span {
+    .icon-container > span, .icon-container2 > span {
         width: 30px;
         height: 30px;
-    }
-    #web-nav {
-        padding-top: 3%;
-        padding-left: 12%;
     }
     #web-nav > ul {
         font-size: 1.5rem;
@@ -3173,16 +3308,16 @@ svg { transition: width 0.7s ease; z-index: 1;}
         width: 93%;
         height: 60%;
     }
-    .plan-txt ul li {
+    .plan-txt > ul > li {
         padding-bottom: 5%;
     }
-    .personal-top h2 {
+    .personal-top > h2 {
         font-size: 1.7rem;
     }
-    .plan-txt h3 {
+    .plan-txt > ul > li > h3 {
         font-size: 1.5em;
     }
-    .plan-txt ul li p {
+    .plan-txt > ul > li > p {
         font-size: 1.2rem;
     }
     .plan-txt {
@@ -3248,11 +3383,11 @@ svg { transition: width 0.7s ease; z-index: 1;}
         margin-left: 20%;
         background-size: 600px auto;
     }
-    .card-bottom ul {
+    .card-bottom > ul {
         width: 400px;
         padding-left: 250px;
     }
-    .card-bottom li {
+    .card-bottom > ul > li {
         font-size: 1.3rem;
     }
     .card-top {
@@ -3261,10 +3396,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .card-bottom {
         height: 55%;
     }
-    .card-top p {
+    .card-top > p {
         font-size: 2.7rem;
     }
-    .card-top img {
+    .card-top > img {
         width: 23%;
         left: 50%;
         top: -9%;
@@ -3288,7 +3423,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .education span {
         width: 180px;
     }
-    #pf-right ul {
+    #pf-right > div > ul {
         /* white-space: initial; */
         padding-left: 0;
     }
@@ -3312,6 +3447,9 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #ab-right {
         width: 50%;
     }
+    #web-nav {
+        padding-top: 7%;
+    }
 }
 @media screen and (max-width: 800px) {
     #sculptor {
@@ -3325,11 +3463,36 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #sculptor-tesktop > img {
         width: 95%;
     }
+    #asics-tesktop {
+        left: 20%;
+    }
     .folder-emoticon::after {
         width: 48%;
     }
+    .web-tooltip1 {
+        width: 60%;
+    }
 }
 @media screen and (max-width: 780px) {
+    .slider-container {
+        width: 60%;
+    }
+    .tamb-container {
+        width: 80%;
+    }
+    .toocool-container {
+        width: 80%;
+    }
+    .youtube-container {
+        width: 80%;
+    }
+    .loopy-container {
+        width: 90%;
+        top: 40%;
+    }
+    .travel-container {
+        width: 80%;
+    }
     .uiux {
         transform: translateX(80%);
         font-size: 1.3rem;
@@ -3343,10 +3506,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .personal-txt {
         height: 50%;
     }
-    #purpose {
+    #purpose, #purpose2 {
         padding-top: 6%;
     }
-    #colors {
+    #colors, #colors2 {
         padding-top: 4%;
     }
     .menuBtn {
@@ -3385,7 +3548,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
         padding-left: 7%;
         padding-top: 3%;
     }
-    .hello span {
+    .hello > p > span {
         font-size: 1.3rem;
     }
     .experience-title > p {
@@ -3428,7 +3591,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .exp-txt {
         font-size: 1rem;
     }
-    .exp-txt span {
+    .exp-txt > ul > li > span {
         width: 120px;
         font-size: 1rem;
     }
@@ -3438,19 +3601,36 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .ability-txt > p {
         padding-top: 3%;
     }
-    .ability span {
+    .ability > div > p > span {
         font-size: 1.2rem;
     }
-    #web-plan {
+    #web-plan, #web-plan2 {
         height: 50%;
     }
     #web-nav {
         padding-top: 5%;
-        padding-left: 8%;
     }
     #web-nav > ul {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
+    #web-nav {
+        padding-top: 8%;
+        padding-left: 20%;
+    }
+    #web-img {
+        margin-top: 0%;
+    }
+    #sculptor-tesktop > img {
+        width: 90%;
+    }
+    #asics-tesktop {
+        left: 21%;
+    }
+    #asics-tesktop > img {
+        width: 630px;
+        padding-top: 3%;
+    }
+
 }
 @media screen and (max-width: 750px) {
     .profile {
@@ -3469,10 +3649,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
         font-size: 1.3rem;
         width: 220px;
     }
-    .introduce p {
+    .introduce > p {
         font-size: 1.3rem;
     }
-    .introduce span {
+    .introduce > p > span {
         font-size: 0.9rem;
     }
     .profile-img {
@@ -3510,30 +3690,29 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .hello > p{
         font-size: 1rem;
     }
-    .hello span  {
+    .hello > p > span  {
         font-size: 1.1rem;
     }
     #search-box {
         width: 85%;
         margin-left: 7.5%;
     }
-    #web-plan {
+    #web-plan, #web-plan2 {
         height: 50%;
     }
-    #folder-web {
+    #folder-web, #folder-web2 {
         width: 45%;
     }
     #web-nav {
         padding-top: 10%;
-        padding-left: 5%;
     }
     #web-nav > ul {
         font-size: 1.3rem;
     }
-    #purpose {
+    #purpose, #purpose2 {
         padding-top: 10%;
     }
-    #colors {
+    #colors, #color2 {
         padding-top: 10%;
     }
     #graphic {
@@ -3599,10 +3778,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .loopy-top p {
         margin-left: 90px;
     }
-    #pf-right h2 {
+    #pf-right > div > h2 {
         font-size: 1.5rem;
     }
-    #pf-right ul {
+    #pf-right > div > ul {
         font-size: 1rem;
     }
     .license > ul > li {
@@ -3663,17 +3842,17 @@ svg { transition: width 0.7s ease; z-index: 1;}
         margin-left: 15%;
         background-size: 500px auto;
     }
-    .card-top p {
+    .card-top > p {
         font-size: 2.2rem;
     }
     .card-top {
         height: 31%;
     }
-    .card-top img {
+    .card-top > img {
         left: 50%;
         top: -5%;
     }
-    .card-bottom ul {
+    .card-bottom > ul {
         width: 300px;
         padding-left: 220px;
     }
@@ -3712,12 +3891,15 @@ svg { transition: width 0.7s ease; z-index: 1;}
 }
 @media screen and (max-width: 620px) {
     #web-nav > ul {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     #web-nav li::after {
         content: "|";
-        margin: 10px;
+        margin: 20px;
         color: #fff;
+    }
+    .web-tooltip1 {
+        left: 30%;
     }
     .search-right {
         font-size: 1.1rem;
@@ -3729,7 +3911,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #nav > ul > li {
         font-size: 1rem;
     }
-    #logo img {
+    #logo > a > img {
         width: 90%;
     }
     #portfolio-left > h1 {
@@ -3759,10 +3941,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
         height: 40px;
         transform: translateX(-73%);
     }
-    .introduce p {
+    .introduce > p {
         font-size: 1.1rem;
     }   
-    .introduce span {
+    .introduce > p > span {
         font-size: 0.9rem;
     }
     .profile-img > img {
@@ -3784,10 +3966,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .card-top {
         height: 36%;
     }
-    .card-top p {
+    .card-top > p {
         font-size: 2.4rem;
     }
-    .card-top img {
+    .card-top > img {
         left: 60%;
         top: -5%;
     }
@@ -3839,7 +4021,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .loopy-top p {
         margin-left: 90px;
     }
-    #folder-web {
+    #folder-web, #folder-web2 {
         width: 45%;
         padding-top: 5%;
     }
@@ -3851,9 +4033,6 @@ svg { transition: width 0.7s ease; z-index: 1;}
     }
     .emoticon-name {
         font-size: 1.5rem;
-    }
-    #web-nav {
-        padding-left: 5%;
     }
 }
 @media screen and (max-width: 600px) {
@@ -3894,19 +4073,22 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .skill-bar2 {
         width: 120px;
     }
-    .introduce span {
+    .introduce > p > span {
         font-size: 0.8rem;
     }
-    #web-nav > ul {
-        font-size: 1.1rem;
+    #asics-tesktop {
+        left: 15%;
     }
-    .plan-txt h3 {
+    #web-nav > ul {
+        font-size: 1.2rem;
+    }
+    .plan-txt > ul > li > h3 {
         font-size: 1.4em;
     }
-    .plan-txt ul li {
+    .plan-txt > ul > li {
         padding-bottom: 10%;
     }
-    .plan-txt ul li p {
+    .plan-txt > ul > li > p {
         font-size: 1rem;
     }
     .profile-img > img {
@@ -3933,32 +4115,32 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .name-icon::before {
         width: 45px;
     }
-    #tool {
-        padding-top: 10%;
-    }
-    #title {
+    #title, #title2 {
         font-size: 2.2rem;
     }
-    #tool > h3 {
+    #tool, #tool2 {
+        padding-top: 10%;
+    }
+    #tool > h3, #tool2 > h3 {
         font-size: 1.7rem;
     }
-    #purpose > h3 {
+    #purpose, #purpose2 > h3 {
         font-size: 1.5rem;
     }
-    #purpose > p {
+    #purpose > p, #purpose2 > p {
         font-size: 1.1rem;
     }
-    #colors > h3 {
+    #colors > h3, #colors2 > h3 {
         font-size: 1.6rem;
     }
-    .icon-container span {
+    .icon-container > span, .icon-container2 > span {
         width: 25px;
         height: 25px;
     }
     
 }
 @media screen and (max-width: 570px) {
-    #folder-web {
+    #folder-web, #folder-web2 {
         width: 50%;
     }   
     .profile-img > img {
@@ -3973,9 +4155,6 @@ svg { transition: width 0.7s ease; z-index: 1;}
     }
     .introduce {
         padding-top: 100%;
-    }
-    #web-nav {
-        padding-left: 5%;
     }
     #pf-left {
         width: 80%;
@@ -3995,13 +4174,13 @@ svg { transition: width 0.7s ease; z-index: 1;}
         width: 80%;
         margin-top: -60%;
     }
+    #asics-tesktop > img {
+        width: 500px;
+    }
 }
 @media screen and (max-width: 550px) {
     .btn1 a, .btn2 a, .btn3 a {
         font-size: 1.3rem;
-    }
-    #web-nav {
-        padding-left: 3%;
     }
     #portfolio-left > h1 {
         font-size: 4.5rem;
@@ -4020,10 +4199,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
         margin-left: 20%;
         background-size: 430px auto;
     }
-    .card-top p {
+    .card-top > p {
         font-size: 2rem;
     }
-    .card-bottom ul {
+    .card-bottom > ul {
         width: 300px;
         padding-left: 170px;
     }
@@ -4157,6 +4336,12 @@ svg { transition: width 0.7s ease; z-index: 1;}
     }
 }
 @media screen and (max-width: 530px) {
+    .menuBtn > span:nth-child(2), .menuBtn > span:nth-child(3) {
+        top: 12px;
+    }
+    .menuBtn > span:nth-child(4) {
+        top: 24px;
+    }
     .personal-top h2 {
         font-size: 1.3rem;
     }
@@ -4167,7 +4352,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
         font-size: 0.9rem;
         line-height: 30px;
     }
-    .ability span {
+    .ability > div > p > span {
         font-size: 1.1rem;
     }
     .ability-txt {
@@ -4183,7 +4368,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
         width: 145%;
     }
     #web-nav li::after {
-        margin: 10px;
+        margin: 15px;
     }
     .menuBtn {
         width: 8%;
@@ -4191,11 +4376,97 @@ svg { transition: width 0.7s ease; z-index: 1;}
 
 }
 @media screen and (max-width: 500px) {
+    .slideshow-controls {
+        font-size: 3rem;
+    }
+    .slideshow-controls {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .slider-container {
+        width: 60%;
+        height: 100%;
+        top: 90%;
+    }
+    .close {
+        font-size: 4.5rem;
+        right: 7%;
+        top: 20%;
+    }
+    .close2 {
+        font-size: 4.5rem;
+        right: 7%;
+        top: 20%;
+    }
+    .close3 {
+        font-size: 4.5rem;
+        right: 7%;
+        top: 20%;
+    }
+    .close4 {
+        font-size: 4.5rem;
+        right: 7%;
+        top: 20%;
+    }
+    .close5 {
+        font-size: 4.5rem;
+        right: 7%;
+        top: 20%;
+    }
+    .close6 {
+        font-size: 4.5rem;
+        right: 7%;
+        top: 5%;
+    }
+    .close7 {
+        top: 15%;
+        right: 7%;
+        font-size: 4.5rem;
+    }
+    .close8 {
+        top: 20%;
+        right: 7%;
+        font-size: 4.5rem;
+    }
+    .tamb-container {
+        width: 90%;
+    }
+    .package-container {
+        top: 50%;
+        transform: translate(-50%,-30%);
+        left: 50%;
+    }
+    .app-container {
+        top: 80%;
+        transform: translate(-50%,-80%);
+    }
+    .toocool-container {
+        top: 45%;
+        width: 90%;
+        transform: translate(-50%,-50%);
+    }
+    .loopy-container {
+        width: 95%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .youtube-container {
+        width: 90%;
+    }
+    .travel-container {
+        width: 90%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
     #front {
         height: 900px;
     }
+    #navigation > ul > li {
+        height: 90px;
+        line-height: 90px;
+    }
     #navigation > ul > li > a {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .license ul {
         margin-left: 5%;
@@ -4214,7 +4485,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
         display: none;
     }
     #web-nav li::after {
-        margin: 5px;
+        margin: 10px;
     }
     #vertical-txt1 {
         font-size: 1.3rem;
@@ -4229,7 +4500,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
         z-index: 5;
         margin-top: -53%;
     }
-    #pf-right ul {
+    #pf-right > div > ul {
         font-size: 0.95rem;
     }
     .education span {
@@ -4238,7 +4509,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .license > ul > li {
         font-size: 1rem;
     }
-    .profile-icon img {
+    .profile-icon > a > img {
         width: 20px; height: 20px;
     }
     .profile {
@@ -4306,7 +4577,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #portfolio-left > h1 {
         font-size: 4rem;
     }
-    .introduce span {
+    .introduce > p > span {
         font-size: 0.8rem;
     }
     .introduce {
@@ -4332,14 +4603,20 @@ svg { transition: width 0.7s ease; z-index: 1;}
         width: 20px; height: 20px;
         background-size: 20px 20px;
     }
-    #web-nav {
-        padding-left: 5%;
-    }
-    #folder-web {
+    #folder-web, #folder-web2 {
         width: 60%;
     }
+    #web-nav {
+        padding-left: 15%;
+    }
     #web-nav > ul {
-        font-size: 1rem;
+        font-size: 1.1rem;
+    }
+    #asics-tesktop {
+        left: 10%;
+    }
+    #asics-tesktop > img {
+        width: 480px;
     }
     .hello > p {
         padding-left: 2%;
@@ -4347,11 +4624,11 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .exp-txt {
         font-size: 0.9rem;
     }
-    .exp-txt span {
+    .exp-txt > ul > li > span {
         width: 100px;
         font-size: 0.9rem;
     }
-    .hello span {
+    .hello > p > span {
         font-size: 1rem;
     }
     #ability-content {
@@ -4360,7 +4637,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .ability {
         margin-top: 16%;
     }
-    .ability span {
+    .ability > div > p > span {
         font-size: 1rem;
     }
     .ability-txt {
@@ -4372,7 +4649,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .contact-txt h1 {
         font-size: 4.3rem;
     }
-    #purpose > p {
+    #purpose > p, #purpose2 > p {
         font-size: 1rem;
         line-height: 220%;
         padding-top: 2%;
@@ -4480,7 +4757,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     
 }
 @media screen and (max-width: 450px) {
-    .menuBtn span {
+    .menuBtn > span {
         height: 4px;
     }
     #openModal2 {
@@ -4517,10 +4794,18 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .light {
         margin-top: -70%;
     }
+    .web-tooltip2 {
+        width: 50%;
+        left: 30%;
+        font-size: 1rem;
+    }
+    .web-tooltip1 {
+        font-size: 1rem;
+    }
     #pf-right {
         padding-left: 15px;
     }
-    #pf-right ul {
+    #pf-right > div > ul {
         font-size: 0.9rem;
     }
     .education span {
@@ -4538,19 +4823,19 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .skill-bar2 {
         height: 6px;
     }
-    .license span {
+    .license > ul > li > span {
         width: 90px;
     }    
     .search-left > p {
         font-size: 0.9rem;
     }
-    .search-left img {
+    .search-left > img {
         width: 16px;
     }
     .hello > p {
         font-size: 0.8rem;
     }
-    .hello span {
+    .hello > p > span {
         font-size: 0.95rem;
     }
     .exp-txt {
@@ -4559,19 +4844,16 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .exp-txt > ul {
         padding-top: 5%;
     }
-    .exp-txt span {
+    .exp-txt > ul > li > span {
         font-size: 0.85rem;
     }
     .ability-txt {
         font-size: 0.8rem;
     }
-    .ability span {
+    .ability > div > p > span {
         font-size: 0.95rem;
     }
-    #web-nav > ul {
-        font-size: 0.93rem;
-    }
-    #purpose > p {
+    #purpose > p, #purpose2 > p {
         font-size: 0.9rem;
     }
     .folder-emoticon {
@@ -4612,6 +4894,9 @@ svg { transition: width 0.7s ease; z-index: 1;}
     }
     #graphic-work p {
         font-size: 0.75rem;
+    }
+    .tooltip1, .tooltip2, .tooltip3, .tooltip4, .tooltip5 {
+        font-size: 1.1rem;
     }
     .tamburinse {
         width: 180px;
@@ -4719,7 +5004,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .contact-card {
         background-size: 380px auto;
     }
-    .card-top p {
+    .card-top > p {
         font-size: 1.8rem;
     }
     .card-top {
@@ -4728,20 +5013,41 @@ svg { transition: width 0.7s ease; z-index: 1;}
 
 }
 @media screen and (max-width: 415px) {
+    .contact-txt > h1 {
+        font-size: 4rem;
+    }
+    .card-top > p {
+        font-size: 1.6rem;
+    }
+    .card-top > p > span {
+        font-size: 0.5em;
+    }
+    .card-bottom > ul > li {
+        font-size: 0.85rem;
+    }
+    .card-name::before, .card-call::before, .card-mail::before {
+        background-size: 18px 18px;
+    }
+    .menuBtn {
+        top: 7%;
+    }
+    .youtube {
+        left: 10%;
+    }
     #emoticon {
         height: 800px;
     }
     #nav > ul {
         padding-left: 3%;
     }
-    #logo img {
+    #logo > a > img {
         width: 85%;
     }
     #nav > ul > li {
         font-size: 0.8rem;
         margin-right: 13px;
     }
-    #pf-right h2 {
+    #pf-right > div > h2 {
         font-size: 1.3rem;
     }
     #portfolio-left > h1 {
@@ -4774,7 +5080,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .skill-bar1, .skill-bar2 {
         width: 100px;
     }
-    #pf-right ul {
+    #pf-right > div > ul {
         font-size: 0.75rem;
     }
     .search-left > p {
@@ -4802,54 +5108,80 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .hello > p {
         font-size: 0.75rem;
     }
-    .hello span {
+    .hello > p > span {
         font-size: 0.9rem;
     }
     .exp-txt {
         font-size: 0.75rem;
     }
-    .exp-txt span {
+    .exp-txt > ul > li > span {
         width: 85px;
         font-size: 0.75rem;
     }
     .ability-txt {
         font-size: 0.75rem;
     }
-    .ability span {
+    .ability > div > p > span {
         font-size: 0.85rem;
     }
-    #folder-web {
+    #folder-web, #folder-web2 {
         width: 70%;
     }
     #web-pf {
         height: 1200px;
     }
-    #web-plan {
+    #web-plan, #web-plan2 {
         height: 60%;
     }
-    #title {
-        font-size: 2.2rem;
+    #asics-tesktop {
+        left: 15%;
     }
-    #tool {
+    #asics-tesktop > img {
+        width: 400px;
+    }
+    #title, #title2 {
+        font-size: 2rem;
+    }
+    #folder-web::after, #folder-web2::after {
+        height: 35px;
+        border-radius: 12px;
+    }
+    #folder-web, #folder-web2 {
+        width: 67%;
+    }
+    #tool > h3, #tool2 > h3 {
+        font-size: 1.5rem;
+    }
+    .tool-img > img, .tool-img2 > img {
+        width: 24%;
+    }
+    #purpose > h3, #purpose2 > h3 {
+        font-size: 1.4rem;
+    }
+    #purpose > p, #purpose2 > p {
+        font-size: 0.87rem;
+        line-height: 26px;
+    }
+    #colors > h3, #colors2 > h3 {
+        font-size: 1.4rem;
+    }
+    #web-nav {
+        padding-left: 10%;
+    }
+    #tool, #tool2 {
         padding-top: 13%;
         padding-left: 8%;
     }
-    #purpose {
+    #purpose, #purpose2 {
         padding-top: 15%;
         padding-left: 7%;
     }
-    #colors {
+    #colors, #colors2 {
         padding-top: 13%;
         padding-left: 7%;
     }
-    #web-nav {
-        padding-left: 4%;
-    }
     .btn1 a, .btn2 a, .btn3 a {
         font-size: 1.1rem;
-    }
-    #web-nav > ul {
-        font-size: 0.85rem;
     }
     .folder-emoticon {
         width: 188%;
@@ -4857,16 +5189,16 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #folder-graphic {
         width: 74%;
     }
-    .plan-txt h3 {
+    .plan-txt > ul > li > h3 {
         font-size: 1.3em;
     }
-    .plan-txt ul li p {
+    .plan-txt > ul > li > p {
         font-size: 0.9rem;
     }
     .card-top {
         height: 31%;
     }
-    .card-bottom ul {
+    .card-bottom > ul {
         padding-left: 140px;
     }
     .contact-card {
@@ -4875,11 +5207,38 @@ svg { transition: width 0.7s ease; z-index: 1;}
     }
     
 }
+@media screen and (max-width: 430px){
+    #purpose > p, #purpose2 > p {
+        font-size: 0.85rem;
+    }
+    .contact-txt {
+        width: 59%;
+    }
+    .contact-card {
+        margin-left: 10%;
+    }
+    .card-top > p {
+        font-size: 1.6rem;
+    }
+    .card-bottom > ul {
+        padding-left: 160px;
+    }
+    .card-bottom > ul > li {
+        font-size: 0.9rem;
+    }
+}
 @media screen and (max-width: 400px) {
+    #navigation > ul > li {
+        height: 65px;
+        line-height: 65px;
+    }
+    #navigation > ul > li > a {
+        font-size: 1rem;
+    }
     #nav > ul > li {
         font-size: 0.72rem;
     }
-    #logo img {
+    #logo > a > img {
         width: 75%;
     }
     #profile-box {
@@ -4907,7 +5266,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
         padding-top: 135%;
         transform: translateX(-120px);
     }
-    #folder-web::after {
+    #folder-web::after, #folder-web2::after {
         height: 35px;
         border-radius: 12px;
     }
@@ -4931,10 +5290,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .card-top {
         height: 29%;
     }
-    .card-top p {
+    .card-top > p {
         font-size: 1.6rem;
     }
-    .card-bottom li {
+    .card-bottom > ul > li {
         font-size: 0.8rem;
     }
     .contact-card {
@@ -4944,23 +5303,23 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .search-left > p {
         font-size: 0.8rem;
     }
-    #title {
+    #title, #title2 {
         padding-left: 7%;
         font-size: 2rem;
     }
-    #tool > h3 {
+    #tool > h3, #tool2 > h3 {
         font-size: 1.5rem;
     }
-    #purpose > h3 {
+    #purpose > h3, #purpose2 > h3 {
         font-size: 1.3rem;
     }
-    #purpose > p {
+    #purpose > p, #purpose2 > p {
         font-size: 0.85rem;
     }
-    #colors > h3 {
+    #colors > h3, #colors2 > h3 {
         font-size: 1.3rem;
     }
-    .tool-img img {
+    .tool-img > img {
         width: 26%;
     }
     #emoticon-explain h1 {
@@ -4969,26 +5328,52 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .emoticon-name {
         font-size: 1.3rem;
     }
-    #web-nav {
-        padding-left: 3%;
-    }
     
 }
 @media screen and (max-width: 380px) {
+    #nav > ul > li {
+        font-size: 0.7rem;
+    }
+    #front {
+        height: 780px;
+    }
+    #vertical-txt1 {
+        font-size: 0.9rem;
+        bottom: 1%;
+    }
+    .menuBtn > span:nth-child(2), .menuBtn > span:nth-child(3) {
+        top: 10px;
+    }
+    .menuBtn > span:nth-child(4) {
+        top: 20px;
+    }
+    #search-box {
+        margin-top: 5%;
+    }
+    .skill-name1, .skill-name2 {
+        font-size: 0.9rem;
+    }
+    .profile-icon > a > img {
+        width: 18px;
+        height: 18px;
+    }
+    #pf-right > div > ul {
+        font-size: 0.75rem;
+    }
     .contact-txt h1 {
         font-size: 3.5rem;
-    }
-    #graphic-nav > ul {
-        font-size: 1rem;
     }
     .folder-emoticon {
         width: 200%;
     }
-    #web-nav > ul {
-        font-size: 0.82rem;
-    }
-    #purpose > p {
+    #purpose > p, #purpose2 > p {
         font-size: 0.8rem;
+    }
+    #asics-tesktop > img {
+        width: 385px;
+    }
+    #vertical-txt2 {
+        left: 7px;
     }
     .profile-txt > ul > li {
         font-size: 0.75rem;
@@ -5010,25 +5395,27 @@ svg { transition: width 0.7s ease; z-index: 1;}
         padding: 3px;
     }
     .education span {
-        width: 100px;
+        width: 110px;
     }
-    #pf-right ul {
-        font-size: 0.7rem;
+    .emoticon-about {
+        padding-top: 60%;
     }
-    .skill-name1 {
-        font-size: 1rem;
-    }
-    .skill-name2 {
-        font-size: 1rem;
+    .sw-skill {
+        padding-left: 5px;
     }
     #ability {
         height: 1040px;
+    }
+    .hello > h1 {
+        font-size: 1.5rem;
+        padding-top: 3%;
+        padding-left: 5%;
     }
     .hello > p {
         font-size: 0.7rem;
         line-height: 25px;
     }
-    .hello span {
+    .hello > p > span {
         font-size: 0.85rem;
     }
     .exp-txt {
@@ -5041,11 +5428,184 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .ability-txt {
         font-size: 0.7rem;
     }
-    .ability span {
+    .ability > div > p > span {
         font-size: 0.8rem;
+    }
+    .folder-emoticon > h3 {
+        font-size: 1rem;
+    }
+    .folder-emoticon {
+        width: 160%;
+    }
+    .folder-emoticon > img {
+        width: 8%;
+    }
+    #purpose > h3, #purpose2 > h3 {
+        font-size: 1.2rem;
+    }
+    #purpose, #purpose2 {
+        padding-top: 20%;
+        padding-left: 7%;
+    }
+    #purpose > p, #purpose2 > p {
+        line-height: 25px;
+    }
+    #colors, #colors2 {
+        padding-top: 15%;
+    }
+    #colors > h3, #colors2 > h3 {
+        font-size: 1.2rem;
+    }
+    .icon-container > span, .icon-container2 > span {
+        width: 22px;
+        height: 22px;
+    }
+    .folder-emoticon::after {
+        border-radius: 10px;
+        height: 30px;
+    }
+    .circle-pink {
+        left: 45px;
+    }
+    .circle-purple {
+        left: 80px;
+    }
+    .circle-white {
+        left: 115px;
+    }
+    #folder-web, #folder-web2 {
+        width: 60%;
+    }
+    #folder-web > img, #folder-web2 > img {
+        width: 8.5%;
+    }
+    #tool > h3, #tool2 > h3 {
+        font-size: 1.3rem;
+    }
+    .tool-img > img {
+        width: 20%;
+    }
+    #title, #title2 {
+        padding-left: 7%;
+        font-size: 1.7rem;
+    }
+    #folder-web {
+        font-size: 1rem;
+    }
+    #folder-web::after, #folder-web2::after {
+        width: 200px;
+        height: 30px;
+        border-radius: 10px;
+        transform: translateX(-90%);
+    }
+    #folder-web > h3, #folder-web2 > h3 {
+        font-size: 1.1rem;
+    }
+    .emoticon-name {
+        font-size: 1rem;
+        padding-top: 10%;
+    }
+    .emoticon-name::before {
+        width: 20px;
+        height: 15px;
+        background-size: 15px 15px;
+    }
+    #emoticon-explain h1 {
+        font-size: 1.6rem;
+    }
+    .emoticon-about > h3 {
+        font-size: 1.1rem;
+    }
+    .emoticon-about p {
+        line-height: 25px;
+        font-size: 0.9rem;
+        padding-top: 7%;
+    }
+    #folder-graphic::after {
+        height: 29px;
+        border-radius: 10px;
+    }
+    #folder-graphic > h3 {
+        font-size: 1rem;
+    }
+    #folder-graphic {
+        width: 60%;
+    }
+    #folder-graphic img {
+        width: 7.5%;
     }
     #graphic-work p {
         font-size: 0.68rem;
+    }
+    #graphic-nav > ul {
+        font-size: 0.9rem;
+    }
+    .personal-txt {
+        height: 50%;
+    }
+    .personal-top {
+        height: 6%;
+    }
+    .personal-top > h2 {
+        font-size: 1.1rem;
+    }
+    .personal-top > p {
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        font-size: 1.4rem;
+    }
+    .plan-txt > ul > li > h3 {
+        font-size: 1.1em;
+    }
+    .plan-txt > ul > li > p {
+        font-size: 0.85rem;
+    }
+    #openModal {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        border: 1.5px solid #000;
+    }
+    .magnifying-glass {
+        width: 10px;
+        height: 11px;
+    }
+    .handle {
+        width: 10px;
+    }
+    #openModal2 {
+        white-space: initial;
+        font-size: 0.9rem;
+        border: 1.5px solid #000;
+        padding-right: 5%;
+        padding-bottom: 1%;
+    }
+    #openModal3 {
+        font-size: 1rem;
+        border: 1.5px solid #000;
+        padding-right: 1%;
+    }
+    .travel-circle2 {
+        left: 20px;
+    }
+    .travel-circle3 {
+        left: 35px;
+    }
+    #graphic-work p {
+        font-size: 0.63rem;
+    }
+    .travel-top > p {
+        margin-left: 55px;
+    }
+    #personal-design {
+        padding-top: 10%;
+    }
+    .app-design {
+        padding-top: 10%;
+    }
+    .tamb-container {
+        top: 40%;
     }
     .tamburinse {
         width: 160px;
@@ -5060,6 +5620,11 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .tamburinse-top p {
         margin-left: 65px;
     }
+    .close4 {
+        top: 15%;
+        right: 5%;
+        font-size: 4rem;
+    }
     .toocool {
         width: 160px;
         height: 220px;
@@ -5071,6 +5636,10 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .toocool-top p {
         margin-left: 55px;
     }
+    .close7 {
+        right: 5%;
+        font-size: 4rem;
+    }
     .youtube {
         left: 10%;
         width: 280px;
@@ -5079,12 +5648,25 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .youtube-top {
         width: 280px;
     }
+    .close5 {
+        top: 15%;
+        right: 5%;
+        font-size: 4rem;
+    }
+    .close6 {
+        right: 5%;
+        font-size: 4rem;
+    }
     .loopy {
         width: 180px;
         height: 110px;
     }
     .loopy-top {
         width: 180px;
+    }
+    .loopy-container {
+        top: 45%;
+        transform: translate(-50%,-55%);
     }
     .travel {
         width: 160px;
@@ -5099,11 +5681,709 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .card-top {
         height: 27%;
     }
+    .close8 {
+        top: 20%;
+        right: 5%;
+        font-size: 4rem;
+    }
     .contact-card {
         margin-left: 7%;
         background-size: 340px auto;
     }
     #web-nav {
+        padding-left: 10%;
+    }
+    #asics-tesktop {
+        left: 12%;
+    }
+    .btn1 a, .btn2 a, .btn3 a {
+        font-size: 0.9rem;
+    }
+    #web-nav > ul {
+        font-size: 1rem;
+    }
+    .slider-container {
+        top: 87%;
+        transform: translate(-50%,-55%);
+    }
+    .close {
+        top: 15%;
+        font-size: 4rem;
+    }
+    .slideshow-controls {
+        top: 45%;
+    }
+    .package-container {
+        top: 45%;
+    }
+    .close2 {
+        top: 15%;
+        font-size: 4rem;
+    }
+    .app-container {
+        top: 75%;
+    }
+    .close3 {
+        top: 15%;
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 360px) {
+    #asics-tesktop > img {
+        width: 350px;
+    }
+    #nav > ul > li {
+        font-size: 0.72rem;
+        margin-right: 10px;
+    }
+    #profile-box {
+        top: 7%;
+        height: 85%;
+    }
+    #profile {
+        height: 850px;
+    }
+    .profile-img > img {
+        width: 145px;
+    }
+    #pf-right > div > ul {
+        font-size: 0.7rem;
+    }
+    #vertical-txt2 {
+        left: 6px;
+    }
+    .hello > p {
+        font-size: 0.65rem;
+        line-height: 23px;
+    }
+    .exp-txt {
+        font-size: 0.65rem;
+    }
+    .ability-txt {
+        font-size: 0.65rem;
+    }
+    .ability-txt > p {
+        padding-top: 6%;
+    }
+    .folder-emoticon {
+        width: 168%;
+    }
+    #folder-graphic {
+        width: 65%;
+    }
+    .contact-card {
+        margin-left: 8%;
+        background-size: 320px auto;
+    }
+    .card-bottom > ul > li {
+        font-size: 0.7rem;
+    }
+    .card-top {
+        height: 26%;
+    }
+    .card-top > p {
+        font-size: 1.4rem;
+    }
+    .card-bottom > ul {
+        padding-left: 140px;
+    }
+    .card-bottom > ul > li {
+        font-size: 0.74rem;
+    }
+    .card-name::before, .card-call::before, .card-mail::before {
+        width: 15px;
+        height: 15px;
+    }
+}
+@media screen and (max-width: 350px) {
+    #logo > a > img {
+        width: 70%;
+    }
+    #nav > ul > li {
+        font-size: 0.65rem;
+    }
+}
+@media screen and (max-width: 330px) {
+    #nav > ul > li {
+        font-size: 0.6rem;
+        margin-right: 7px;
+    }
+    
+}
+@media screen and (max-width: 290px) {
+    #top-nav {
+        height: 30px;
+    }
+    #logo > a {
+        padding-left: 12px;
+        padding-top: 1px;
+    }
+    #logo > a > img {
+        width: 60%;
+    }
+    #nav > ul > li {
+        font-size: 0.56rem;
+        margin-right: 7px;
+    }
+    #navigation > ul > li > a {
+        font-size: 1rem;
+    }
+    #navigation > ul > li {
+        height: 60px;
+        line-height: 60px;
+    }
+    .menuBtn > span {
+        height: 3px;
+    }
+    .menuBtn > span:nth-child(2), .menuBtn > span:nth-child(3) {
+        top: 8px;
+    }
+    .menuBtn > span:nth-child(4) {
+        top: 16px;
+    }
+    #front {
+        margin-top: 30px;
+        height: 670px;
+    }
+    #vertical-txt1 {
+        font-size: 0.7rem;
+        left: 5px;
+        bottom: 6px;
+    }
+    .light {
+        margin-top: -68%;
+        padding-left: 8%;
+    }
+    .num {
+        font-size: 1.3rem;
+    }
+    .design-circle {
+        width: 48%;
+        height: 5%;
+        border: 1.6px solid #fff;
+    }
+    .design {
+        font-size: 0.7rem;
+        &::before {
+            font-size: 9px;
+            margin-right: 2px;
+            margin-left: 4px;
+        }
+        &::after {
+            font-size: 9px;
+            margin-right: 2px;
+        }
+    }
+    .introduce > p {
+        font-size: 0.77rem;
+    }
+    .introduce > p > span {
+        font-size: 0.55rem;
+    }
+    .introduce {
+        padding-top: 135%;
+        transform: translateX(-90px);
+    }
+    .uiux::after {
+        height: 27px;
+        transform: translateX(-78%);
+    }
+    .uiux {
+        transform: translateX(35%);
+        width: 135px;
+        font-size: 0.8rem;
+        padding-top: 17%;
+    }
+    #profile-box {
+        width: 95%;
+        height: 95%;
+        top: 2.5%;
+        left: 2.5%;
+    }
+    #profile {
+        height: 730px;
+    }
+    .profile-icon > a {
+        padding-right: 0px;
+    }
+    #vertical-txt2 {
+        display: none;
+    }
+    #pf-left {
+        height: 25%;
+    }
+    .profile {
+        padding-top: 10px;
+    }
+    .profile-icon > a > img {
+        width: 15px;
+        height: 15px;
+    }
+    .profile-img > img {
+        width: 120px;
+    }
+    .profile-txt {
+        margin-left: 2%;
+        padding: 8px;
+    }
+    #portfolio-left > h1 {
+        font-size: 2.4rem;
+    }
+    .profile-txt > ul > li {
+        font-size: 0.56rem;
+        margin-bottom: 3%;
+    }
+    .name-icon::before, .birth-icon::before, .num-icon::before, .mail-icon::before {
+        height: 15px;
+        background-size: 15px 15px;
+        width: 20px;
+    }
+    #pf-right {
+        padding-top: 0;
+        width: 100%;
+    }
+    #pf-right > div > h2 {
+        font-size: 1rem;
+    }
+    #pf-right > div > ul {
+        font-size: 0.6rem;
+        padding-top: 3%;
+    }
+    .education > ul > li > span {
+        width: 85px;
+    }
+    .license > ul > li > span {
+        width: 65px;
+    }
+    .license > ul > li {
+        font-size: 0.7rem;
+        padding: 0.2%;
+    }
+    .skill-name1, .skill-name2 {
+        font-size: 0.7rem;
+    }
+    .skill-bar1, .skill-bar2 {
+        width: 75px;
+        border: 1px solid #fff
+    }
+    #ability {
+        height: 850px;
+    }
+    #search-box {
+        height: 3%;
+        border-radius: 7px;
+    }
+    .search-left > p {
+        font-size: 0.6rem;
+    }
+    .search-left > img {
+        width: 12px;
+    }
+    .about > p {
+        font-size: 1rem;
+    }
+    .hello > h1 {
+        font-size: 1.4rem;
+        padding-top: 3%;
+        padding-left: 5%;
+    }
+    .hello > p {
+        font-size: 0.53rem;
+        line-height: 20px;
+    }
+    .hello > p > span {
+        font-size: 0.65rem;
+    }
+    .experience-title > p {
+        font-size: 1rem;
+    }
+    .experience-title > p {
+        font-size: 1rem;
+    }
+    .exp-txt {
+        font-size: 0.56rem;
+    }
+    .exp-txt > ul > li > span {
+        width: 60px;
+        font-size: 0.56rem;
+    }
+    .ability {
+        margin-top: 27%;
+    }
+    .ability-title > p {
+        font-size: 1rem;
+    }
+    .ability-txt {
+        font-size: 0.53rem;
+    }
+    .ability > div > p > span {
+        font-size: 0.6rem;
+    }
+    #web-pf {
+        height: 900px;
+    }
+    #folder-web > img, #folder-web2 > img {
+        width: 8%;
+    }
+    #folder-web, #folder-web2 {
+        width: 65%;
+    }
+    #folder-web > h3, #folder-web2 > h3 {
+        font-size: 0.9rem;
+    }
+    #folder-web::after, #folder-web2::after {
+        height: 25px;
+        border: 1px solid #fff;
+    }
+    #title, #title2 {
+        padding-left: 7%;
+        font-size: 1.4rem;
+    }
+    #tool > h3, #tool2 > h3 {
+        font-size: 1.1rem;
+    }
+    .tool-img > img {
+        width: 15%;
+    }
+    #purpose > h3, #purpose2 > h3 {
+        font-size: 1rem;
+    }
+    #purpose > p, #purpose2 > p {
+        line-height: 20px;
+        font-size: 0.6rem;
+    }
+    #colors > h3, #colors2 > h3 {
+        font-size: 1.1rem;
+    }
+    #web-nav {
+        padding-left: 12%;
+    }
+    #web-nav > ul {
+        font-size: 0.7rem;
+    }
+    #asics-tesktop > img {
+        width: 290px;
+    }
+    .btn1 a, .btn2 a, .btn3 a {
+        font-size: 0.7rem;
+        padding: 5px 5px 5px;
+    }
+    .web-tooltip1 {
+        font-size: 0.65rem;
+        top: 40%;
+    }
+    .web-tooltip2 {
+        width: 45%;
+        left: 30%;
+        font-size: 0.65rem;
+    }
+    #emoticon {
+        height: 730px;
+    }
+    .folder-emoticon {
+        width: 190%;
+        margin-left: 10%;
+    }
+    .folder-emoticon::after {
+        height: 25px;
+        border: 1px solid #fff;
+    }
+    .folder-emoticon > h3 {
+        font-size: 0.85rem;
+    }
+    #emoticon-explain > div > h1 {
+        font-size: 1.4rem;
+    }
+    .emoticon-name {
+        font-size: 0.85rem;
+        padding-top: 15%;
+    }
+    .emoticon-name::before {
+        width: 15px;
+        height: 12px;
+        background-size: 12px 12px;
+    }
+    .emoticon-about {
+        padding-top: 100%;
+    }
+    .emoticon-about > h3 {
+        font-size: 1rem;
+    }
+    .emoticon-about p {
+        line-height: 21px;
+        font-size: 0.75rem;
+        padding-top: 10%;
+    }
+    #emo-phone > img {
+        right: 10%;
+        width: 75%;
+    }
+    #emoticon-img2 > img {
+        width: 150%;
+    }
+    #emoticon-img3 > img {
+        width: 150%;
+    }
+    #graphic {
+        height: 850px;
+    }
+    #folder-graphic {
+        padding-left: 10%;
+    }
+    #folder-graphic {
+        width: 80%;
+        height: 7%;
+    }
+    #folder-graphic > h3 {
+        font-size: 0.9rem;
+    }
+    #folder-graphic::after {
+        height: 25px;
+        border-radius: 10px;
+        border: 1px solid #fff;
+    }
+    #graphic-nav > ul {
+        font-size: 0.75rem;
+    }
+    .personal-top > h2 {
+        font-size: 0.85rem;
+    }
+    .personal-top > p {
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        font-size: 1rem;
+    }
+    .personal-top > p {
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        font-size: 1rem;
+    }
+    .plan-txt > ul > li > h3 {
+        font-size: 0.8em;
+    }
+    .plan-txt > ul > li::marker {
+        font-size: 8px;
+    }
+    .plan-txt > ul > li > p {
+        font-size: 0.65rem;
+    }
+    #openModal {
+        font-size: 0.7rem;
+        white-space: nowrap;
         padding-left: 2%;
+        padding-right: 0%;
+        border: 1.3px solid #000;
+    }
+    .zoom-icon {
+        width: 25px;
+        height: 25px;
+    }
+    .magnifying-glass {
+        width: 8px;
+        height: 8px;
+    }
+    .handle {
+        width: 8px;
+    }
+    #openModal2 {
+        font-size: 0.7rem;
+        padding-right: 4%;
+        border: 1.3px solid #000;
+    }
+    #openModal3 {
+        font-size: 0.8rem;
+        border: 1.3px solid #000;
+        padding-right: 1%;
+    }
+    .slideshow-controls {
+        top: 42%;
+        font-size: 2rem;
+    }
+    .close, .close2, .close3 {
+        top: 20%;
+        font-size: 3rem;
+    }
+    .tamburinse {
+        width: 125px;
+        height: 150px;
+    }
+    .tamburinse-top {
+        width: 125px;
+    }
+    .tamb-circle1, .tamb-circle2, .tamb-circle3 {
+        top: 6px;
+        width: 9px;
+        height: 9px;
+    }
+    .tamb-circle2 {
+        left: 16px;
+    }
+    .tamb-circle3 {
+        left: 27px;
+    }
+    .tamburinse-top p {
+        margin-left: 45px;
+    }
+    .tamburinse-top {
+        height: 20px;
+    }    
+    #graphic-work p {
+        font-size: 0.55rem;
+    }
+    .tamburinse img {
+        padding-top: 28%;
+    }
+    .toocool-top {
+        width: 140px;
+        height: 20px;
+    }
+    .toocool {
+        width: 140px;
+        height: 190px;
+        left: 45%;
+    }
+    .toocool-top p {
+        margin-left: 45px;
+    }
+    .toocool-circle1, .toocool-circle2, .toocool-circle3 {
+        top: 6px;
+        width: 9px;
+        height: 9px;
+    }
+    .toocool-circle2 {
+        left: 16px;
+    }
+    .toocool-circle3 {
+        left: 27px;
+    }
+    .youtube {
+        top: 32%;
+        left: 7%;
+        width: 230px;
+        height: 300px;
+    }
+    .youtube-top {
+        width: 230px;
+        height: 20pxv;
+    }
+    .youtube-top p {
+        margin-left: 70px;
+    }
+    .youtube-circle2 {
+        left: 16px;
+    }
+    .youtube-circle3 {
+        left: 27px;
+    }
+    .youtube-circle1, .youtube-circle2, .youtube-circle3 {
+        top: 6px;
+        width: 9px;
+        height: 9px;
+    }
+    .loopy-top {
+        width: 140px;
+        height: 20px;
+    }
+    .loopy {
+        top: 80%;
+        width: 140px;
+        height: 80px;
+    }
+    .loopy-circle1, .loopy-circle2, .loopy-circle3 {
+        top: 6px;
+        width: 9px;
+        height: 9px;
+    }
+    .loopy-circle2 {
+        left: 16px;
+    }
+    .loopy-circle3 {
+        left: 27px;
+    }
+    .loopy-top p {
+        margin-left: 40px;
+    }
+    .travel-top {
+        width: 122px;
+        height: 20px;
+    }
+    .travel {
+        top: 75%;
+        width: 122px;
+        height: 140px;
+    }
+    .travel-circle1, .travel-circle2, .travel-circle3 {
+        top: 6px;
+        width: 9px;
+        height: 9px;
+    }
+    .travel-circle2 {
+        left: 16px;
+    }
+    .travel-circle3 {
+        left: 27px;
+    }
+    .travel-top > p {
+        margin-left: 40px;
+    }
+    .close4 {
+        top: 20%;
+        font-size: 3rem;
+    }
+    .close7 {
+        top: 20%;
+        font-size: 3rem;
+    }
+    .close5 {
+        top: 20%;
+        right: 5%;
+        font-size: 3rem;
+    }
+    .close6 {
+        top: 10%;
+        font-size: 3rem;
+    }
+    .close8 {
+        top: 25%;
+        font-size: 3rem;
+    }
+    .tooltip1, .tooltip2, .tooltip3, .tooltip4, .tooltip5 {
+        font-size: 1rem;
+    }
+    #contact {
+        height: 625px;
+    }
+    .contact-txt h1 {
+        font-size: 2.6rem;
+    }
+    .contact-card {
+        margin-top: 35%;
+        margin-left: 3%;
+        background-size: 256px auto;
+    }
+    .card-top {
+        height: 25%;
+    }
+    .card-top > p {
+        font-size: 1.2rem;
+    }
+    .card-bottom > ul {
+        padding-left: 110px;
+    }
+    .card-name::before, .card-call::before, .card-mail::before {
+        width: 13px;
+        height: 13px;
+        background-size: 13px 13px;
+    }
+    .card-bottom > ul > li {
+        font-size: 0.6rem;
+    }
+    .card-top > img {
+        left: 63%;
+        top: -8%;
     }
 }

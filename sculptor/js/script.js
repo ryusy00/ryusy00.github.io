@@ -1,10 +1,23 @@
-// 네비게이션
+// 마우스 커서 애니메이션
+document.addEventListener('DOMContentLoaded', function() {
+    const customCursor = document.querySelector('.custom-cursor');
+
+    document.addEventListener('mousemove',function(e) {
+        // 마우스 위치에 따라 커서 아이콘 위치 업데이트
+        customCursor.style.left = e.pageX + 'px';
+        customCursor.style.top = e.pageY + 'px';
+    });
+});
+
+// pc네비게이션, 슬라이드 배너
 $(function() {
     $('#navigation li').hover(function() {
         $(this).find('.sub-nav').fadeIn();
     },function() {
         $(this).find('.sub-nav').fadeOut();
     });
+    
+    // 메인 배너 - 모바일
     $(".slide-banner > div:gt(0)").hide();
     setInterval(function() {
         $('.slide-banner > div:first')
@@ -14,12 +27,138 @@ $(function() {
             .end()
             .appendTo('.slide-banner');
     }, 4000);
+
+    // 메인 배너 - 모바일
+    $(".m-banner > div:gt(0)").hide();
+    setInterval(function() {
+        $('.m-banner > div:first')
+            .fadeOut(2000)
+            .next()
+            .fadeIn(2000)
+            .end()
+            .appendTo('.m-banner');
+    }, 4000);
 });
+
+// 모바일 네비게이션
+$(window).on("scroll",function() {
+    var nav = $("#m-navigation > ul");
+    var viewportWidth = $(window).width();
+    if ($(window).scrollTop() === 0) {
+        $("#nav").css({
+            top: '40px'
+        });
+        $("#m-nav").css({
+            top: '35px'
+        });
+        nav.css('padding-top',"50px");
+    } 
+    else {
+        $("#nav").css({
+            top: 0
+        });
+        $("#m-nav").css({
+            top: 0
+        });
+        nav.css('padding-top',0);
+    }
+    if (viewportWidth <= 585) {
+        var scrollPosition = $(this).scrollTop();
+        // 스크롤 위치에 따라 #m-navigation의 위치 조정
+        if (scrollPosition > 0) {
+            $("#m-navigation").css({
+                top: '40px'
+            });
+            $("#m-nav").css({
+                top: 0
+            });
+            $("#m-navigation > ul").css({
+                paddingTop: 0
+            });
+        } else {
+            $("#m-navigation").css({
+                top: '30px'
+            });
+            $("#m-nav").css({
+                top: '30px'
+            });
+            $("#m-navigation > ul").css({
+                paddingTop: '40px'
+            });
+        }
+    }
+});
+$(window).on("load",function() {
+    var viewportWidth = $(window).width();
+    if ($(window).scrollTop() === 0) {
+        $("#nav").css({
+            top: '40px'
+        });
+        $("#m-nav").css({
+            top: '35px'
+        });
+        $("#m-navigation > ul").css({
+            paddingTop: '50px'
+        });
+    }
+    else {
+        $("#nav").css({
+            top: 0
+        });
+        $("#m-nav").css({
+            top: 0
+        });
+        $("#m-navigation > ul").css({
+            paddingTop: '50px'
+        });
+    }
+    if (viewportWidth <= 585) {
+        var scrollPosition = $(this).scrollTop();
+        // 스크롤 위치에 따라 #m-navigation의 위치 조정
+        if (scrollPosition > 0) {
+            $("#m-navigation").css({
+                top: '40px'
+            });
+            $("#m-nav").css({
+                top: 0
+            });
+            $("#m-navigation > ul").css({
+                paddingTop: 0
+            });
+        } else {
+            $("#m-navigation").css({
+                top: '30px'
+            });
+            $("#m-nav").css({
+                top: '30px'
+            });
+            $("#m-navigation > ul").css({
+                paddingTop: '40px'
+            });
+        }
+    }
+});
+
+
+// 퀵 네비게이션 효과
+$(function() {
+    $('.menu-bar > .menuBtn'). on('click', 
+    function(event) {
+        event.preventDefault();
+
+        $(this).toggleClass('active');
+        $('#m-navigation').toggleClass('visible');
+    });
+});
+
 
 // 모달 레이어 팝업창
 $(document).ready(function() {
     // 모달 열기 버튼 클릭 시 모달 열기
     $('#header-banner > a').on('click', function() {
+        $('#myModal').css('display', 'block');
+    });
+    $('#m-hd_banner > a').on('click', function() {
         $('#myModal').css('display', 'block');
     });
 
@@ -36,8 +175,6 @@ $(document).ready(function() {
         }
     });
 });
-
-
   
 
 // furryfriends 애니메이션
@@ -56,30 +193,6 @@ $(function() {
             .end()
             .appendTo('.slide-banner');
     }, 4000);
-});
-$(window).on("scroll",function() {
-    if ($(window).scrollTop() === 0) {
-        $("#nav").css({
-            top: '40px'
-        });
-    } 
-    else {
-        $("#nav").css({
-            top: 0
-        });
-    }
-});
-$(window).on("load",function() {
-    if ($(window).scrollTop() === 0) {
-        $("#nav").css({
-            top: '40px'
-        });
-    } 
-    else {
-        $("#nav").css({
-            top: 0
-        });
-    }
 });
 $(document).ready(function() {
     $('#collaboration').hide();
@@ -336,3 +449,28 @@ $(document).ready(function() {
     });
 });
   
+
+$(document).ready(function() {
+    $('.bottom-btn1').hide();
+    $('.bottom-btn2').hide();
+    $('.left-btn1').click(function() {
+      $('.m_help-list').toggle();
+      $('.left-btn1').hide();
+      $('.bottom-btn1').show();
+    });
+    $('.bottom-btn1').click(function() {
+      $('.m_help-list').toggle();
+      $('.left-btn1').show();
+      $('.bottom-btn1').hide();
+    });
+    $('.left-btn2').click(function() {
+      $('.m_company-list').toggle();
+      $('.left-btn2').hide();
+      $('.bottom-btn2').show();
+    });
+    $('.bottom-btn2').click(function() {
+      $('.m_company-list').toggle();
+      $('.left-btn2').show();
+      $('.bottom-btn2').hide();
+    });
+});
