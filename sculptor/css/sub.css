@@ -2307,6 +2307,11 @@ body {
     }
     
 }
+@media all and (max-width:414px) {
+    .contents > img {
+        width: 240px;
+    }
+}
 @media all and (max-width:390px) {
     .modal-content {
         width: 280px;
