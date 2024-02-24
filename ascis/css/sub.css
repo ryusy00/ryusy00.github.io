@@ -1,0 +1,161 @@
+body {
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.custom-cursor {
+    position: absolute;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    background-color: #0d3273;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease;
+    z-index: 9999;
+}
+/* 네비게이션 영역 */
+#nav-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height: 100vh;
+    background-color: #fff;
+    padding: 10px 36px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+#nav > li > a  { 
+    padding-left: 10px;   
+}
+#nav > li:hover {
+    cursor: pointer;
+    background-color: #0d3273;
+}
+#nav > li:hover a {
+    color: #fff;
+}
+.section-wrap {
+    width: calc(100vw - 270px);
+    float: right;
+    display: flex;
+    flex-direction: column;
+    /* align-items: end; */
+    overflow: hidden;
+}
+#logo {
+    padding-top: 30px;
+}
+#nav {
+    font-size: 1rem;
+    padding-top: 50px;
+}
+#nav > li {
+    height: 50px;
+    line-height: 50px;
+}
+#nav > li > a {
+    color: #000;
+}
+#search{
+    display: flex;
+    align-items: center;
+    padding-top: 50%;
+}
+#search-box {
+    display: flex;
+    align-items: center;
+}
+.search-box {
+    width: 120px;
+    height: 30px;
+    border: 2px solid #0d3273;
+}
+.zoom {
+    width: 40px;
+    height: 36px;
+    background-color: #0d3273;
+    border: 2px solid #0d3273;
+    cursor: pointer;
+}
+.zoom > i {
+    filter: invert(1);
+    font-size: 20px;
+    /* padding: 5px; */
+    text-align: center;
+}
+#cart-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+#cart-icon > i {
+    color: #0d3273;
+    font-size: 20px;
+    padding: 5px;
+}
+#sns {
+    padding-left: 10px;
+    padding-top: 35%;
+}
+#sns > ul {
+    display: flex;
+}
+#sns span {
+    display: none;
+}
+#sns > ul > li:nth-child(1) {
+    width: 40px; height: 40px;
+    background-image: url("../images/instagram.png");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    cursor: pointer;
+}
+#sns > ul > li:nth-child(2) {
+    width: 40px; height: 40px;
+    background-image: url("../images/facebook.png");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#sns > ul > li:nth-child(3) {
+    width: 40px; height: 40px;
+    background-image: url("../images/kakaotalk.png");
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#nav-btn {
+    display: block;
+    position: fixed;
+    top: 15%;
+    /* right: -50%; */
+    left: 200px;
+    width: 175px;
+    height: 35px;
+    transform: rotate(-90deg);
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 0px 0px 10px 10px;
+}
+#nav-btn > a {
+    display: flex;
+    align-items: center;
+}
+#nav-btn span {
+    transform: rotate(180deg);
+    width: 70%;
+    color: #0d3273;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+#nav-btn img {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 30px;
+}

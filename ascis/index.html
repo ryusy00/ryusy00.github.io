@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아식스 리디자인 - 메인페이지</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- 마우스 커서 아이콘 -->
+    <div class="custom-cursor"></div>
+    <!-- 네비게이션 영역 -->
+    <div id="nav-wrap">
+        <div id="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="아식스 로고">
+            </a>
+        </div>
+        <ul id="nav">
+            <li><a href="sub.html">MAN</a></li>
+            <li><a href="sub.html">WOMAN</a></li>
+            <li><a href="sub.html">SPORTS</a></li>
+            <li><a href="sub.html">COLLECTION</a></li>
+            <li><a href="sub.html">COLLABORATION</a></li>
+            <li><a href="sub.html">NEWS&EVENT</a></li>
+            <li><a href="sub.html">고객센터</a></li>
+            <li><a href="sub.html">회원혜택</a></li>
+            <li><a href="sub.html">Log in/Sign in</a></li>
+        </ul>
+        <div id="search">
+            <div id="search-box">
+                <input type="text" class="search-box" placeholder="텍스트를 입력하세요">
+                <button class="zoom">
+                    <i class="fas fa-search"></i> <!-- 돋보기 아이콘 -->
+                </button>
+            </div>
+            <div id="cart-icon">
+                <i class="fas fa-shopping-cart"></i> <!-- 장바구니 아이콘 -->
+            </div>
+        </div>        
+        <div id="sns">
+            <ul>
+                <li><span>Instagram</span></li>
+                <li><span>Facebook</span></li>
+                <li><span>Kakaotalk</span></li>
+            </ul>
+        </div>
+        <div id="nav-btn">
+            <a href="#">
+                <span>MENU</span>
+                <img src="images/small-logo.png" alt="메뉴 로고">
+            </a>
+        </div>
+    </div>
+    <div class="section-wrap">
+        <!-- 메인 배너 영역 -->
+        <section id="main-banner">
+            <ul id="slide-banner">
+                <li id="banner1">
+                    <img src="images/main-banner1.jpg" alt="메인 배너1">
+                    <div class="banner1-txt">
+                        <p>ascics x slam jam</p>
+                        <h2>Limited Release!</h2>
+                        <h4>아식스 x 슬랙 잼 한정 발매</h4>
+                    </div>
+                </li>
+                <li id="banner2">
+                    <img src="images/main-banner2.jpg" alt="메인 배너2">
+                    <div class="banner2-txt">
+                        <img src="images/banner2-logo.png" alt="메인배너2 로고">
+                        <p>
+                            모터사이클에서 영감을 얻은 디자인과 젤(GEL)테크놀로지와 뒤틀림을 방지하고 반발력을 높여주는 <br>
+                            아웃솔의 트러스틱 구조를 가지고 있는아식스 젤-1090은 아식스의 70년이 넘는 신발에 대한 혁신, <br>
+                            인간을 중심으로 한 신발 과학의 역사와 기술력이 조화를 이루고자 했습니다.
+                        </p>
+                    </div>
+                    <ul class="banner2-products">
+                        <li class="product">
+                            <a href="#">
+                                <img src="images/banner2-product1.png" alt="배너 상품1">
+                                <span>
+                                    Asics Gel-1090 <br>
+                                    Blue Grey
+                                </span>
+                            </a>
+                        </li>
+                        <li class="product">
+                            <a href="#">
+                                <img src="images/banner2-product2.png" alt="배너 상품2">
+                                <span>
+                                    Asics Gel-1090 <br>
+                                    V2 Cream Clay Grey
+
+                                </span>
+                            </a>
+                        </li>
+                        <li class="product">
+                            <a href="#">
+                                <img src="images/banner2-product3.png" alt="배너 상품3">
+                                <span>
+                                    Asics Gel-1090 <br>
+                                    Piedmont Grey
+
+                                </span>
+                            </a>
+                        </li>
+                        <li class="product">
+                            <a href="#">
+                                <img src="images/banner2-product4.png" alt="배너 상품4">
+                                <span>
+                                    Asics Gel-1090 <br>
+                                    Black Pure Silver
+                                </span>
+                            </a>
+                        </li>
+                        <li class="product">
+                            <a href="#">
+                                <img src="images/banner2-product5.png" alt="배너 상품5">
+                                <span>
+                                    Asics x Freja Wewer Gel-1090 <br>
+                                    V2 Clay Grey Pure Silver
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="banner3">
+                    <img src="images/main-banner3.jpg" alt="메인 배너3">
+                    <div class="banner3-logo">
+                        <img src="images/banner3-logo.png" alt="배너3 로고">
+                        <p>X</p>
+                        <img src="images/banner3-vivien_logo.png" alt="배너3 비비안웨스트우드 로고">
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- 브랜드 역사 & 실시간 베스트 영역 -->
+        <section id="about-asics">
+            <h1>ABOUT ASICS</h1>
+            <div id="time-best">
+                <div id="best-box">
+                    <div class="rank">
+                        <h3>1st</h3>
+                        <img src="images/rank1.png" alt="랭킹1">
+                        <p class="1st-name">
+                            조그 100 S SMU (2E) - 라이트 그레이: <br>
+                            미드 그레이 / 1201A564-020
+                        </p>
+                    </div>
+                    <div class="rank">
+                        <h3>2st</h3>
+                        <img src="images/rank2.png" alt="렝킹2">
+                        <p>
+                            젤-1090 - 화이트:블랙 / <br>
+                            1021A285-100 
+                        </p>
+                    </div>
+                    <div class="rank">
+                        <h3>3st</h3>
+                        <img src="images/rank3.png" alt="랭킹3">
+                        <p>
+                            젤 -1130 - 오이스터 그레이:\ <br>
+                            퓨어 실버 / 1201A256-023 
+                        </p>
+                    </div>
+                    <div class="rank">
+                        <h3>4st</h3>
+                        <img src="images/rank4.png" alt="랭킹4">
+                        <p>
+                            젤-1090 W - 화이트: <br>
+                            미드나이트 / 1022A215-100
+                        </p>
+                    </div>
+                    <div class="rank">
+                        <h3>5st</h3>
+                        <img src="images/rank5.png" alt="랭킹5">
+                        <p>
+                            젤-1130 MSS SMU - 스틸 그레이: <br>
+                            퓨어 실버 / 1201A934-020 
+                        </p>
+                    </div>
+                </div>
+                <div id="timebest-txt">
+                    REAL TIME BEST
+                </div>
+            </div>
+            <div class="history">
+                <div id="history-box1">
+                    <div id="history1">
+                        <h3 class="year">1940's</h3>
+                        <p class="explain">오니츠카 가하치로 주식회사 오니츠카 설립</p>
+                        <div class="history-img1">
+                            <img src="images/1940-img1.png" alt="1940년대 이미지1">
+                            <img src="images/1940-img2.png" alt="1940년대 이미지2">
+                        </div>
+                    </div>
+                    <div id="history2_3-wrap">
+                        <div id="history2">
+                            <h3 class="year">1950's</h3>
+                            <p class="explain">첫 번째 농구화, 마라톤화 출시</p>
+                            <div class="history-img2">
+                                <img src="images/1950-img1.png" alt="1950년대 이미지1">
+                            </div>
+                        </div>
+                        <div id="history3">
+                            <h3 class="year">1950's</h3>
+                            <p class="explain">첫 번째 농구화, 마라톤화 출시</p>
+                            <div class="history-img3">
+                                <img src="images/1950-img2.png" alt="1950년대 이미지2">
+                                <img src="images/1950-img3.png" alt="1950년대 이미지3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="history-box3">
+                    <div id="history7">
+                        <h3 class="year">1970's</h3>
+                        <p class="explain">(주) 아식스 설립 & 러닝화 출시</p>
+                        <div class="history-img7">
+                            <img src="images/1970-img3.png" alt="1970년대 이미지3">
+                            <img src="images/1970-img4.png" alt="1970년대 이미지4">
+                        </div>
+                    </div>
+                    <div id="history8_9-wrap">
+                        <div id="history8">
+                            <h3 class="year">1980's</h3>
+                            <p class="explain">(주) 아식스 타이거 설립 & 다양한 슈즈 출시</p>
+                            <div class="history-img8">
+                                <img src="images/1980-img1.png" alt="1980년대 이미지1">
+                                <img src="images/1980-img2.png" alt="1980년대 이미지2">
+                            </div>
+                        </div>
+                        <div id="history9">
+                            <h3 class="year">1980's</h3>
+                            <p class="explain">GEL이 장착된 러닝화 출시</p>
+                            <div class="history-img9">
+                                <img src="images/1980-img3.png" alt="1980년대 이미지3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="more-button">
+                    <span class="line1"></span>
+                    <button class="more-btn">
+                        MORE
+                    </button>
+                    <span class="line2"></span>
+                </div>
+                <div id="history-box2">
+                    <div id="history4_5-wrap">
+                        <div id="history4">
+                            <h3 class="year">1960's</h3>
+                            <p class="explain">마라톤 슈즈 ‘매직 러너’ 출시</p>
+                            <div class="history-img4">
+                                <img src="images/1960-img1.png" alt="1960년대 이미지1">
+                                <img src="images/1960-img2.png" alt="1960년대 이미지2">
+                            </div>
+                        </div>
+                        <div id="history5">
+                            <h3 class="year">1960's</h3>
+                            <p class="explain">트랙 & 필드 스파이크 슈즈 런 스파이크 시리지(RUNSPARK Series) 출시</p>
+                            <div class="history-img5">
+                                <img src="images/1960-img3.png" alt="1960년대 이미지3">
+                                <img src="images/1960-img4.png" alt="1960년대 이미지4">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="history6">
+                        <h3 class="year">1970's</h3>
+                        <p class="explain">(주) 아식스 설립 & 매쉬 갑피 배구화 출시</p>
+                        <div class="history-img6">
+                            <img src="images/1970-img1.png" alt="1970년대 이미지1">
+                            <img src="images/1970-img2.png" alt="1970년대 이미지2">
+                        </div>
+                    </div>
+                </div>
+                <div id="history-box4">
+                    <div id="history10_11-wrap">
+                        <div id="history10">
+                            <h3 class="year">1990's</h3>
+                            <p class="explain">새로운 로고 & 키즈화 ‘SUKU SUKU’ 출시</p>
+                            <div class="history-img10">
+                                <img src="images/1990-img1.png" alt="1990년대 이미지1">
+                                <img src="images/1990-img2.png" alt="1990년대 이미지2">
+                            </div>
+                        </div>
+                        <div id="history11">
+                            <h3 class="year">2000's</h3>
+                            <p class="explain">럭비 구가대표팀 공식  후원 계약 & ASICS 플래그십 스토어 오픈</p>
+                            <div class="history-img11">
+                                <img src="images/2000-img1.png" alt="2000년대 이미지1">
+                                <img src="images/2000-img2.png" alt="2000년대 이미지2">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="history12">
+                        <h3 class="year">2000's</h3>
+                        <p class="explain">Fitness Keeper 어플리케이션 인수 & 아식스 브랜드 메세지 ‘I MOVE ME’ 발표</p>
+                        <div class="history-img12">
+                            <img src="images/2000-img3.png" alt="2000년대 이미지3">
+                            <img src="images/2000-img4.png" alt="2000년대 이미지4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 멤버십 공지사항 영역 -->
+        <section id="membership" class="membership">
+            <div class="parallax-content">
+                <div id="membership-title">
+                    <p>ASCIS KOREA MEMBERSHIP</p>
+                    <div class="signin-btn">
+                        <a href="#">회원가입</a>
+                    </div>
+                </div>
+                <div id="membership-txt">
+                    아식스 코리아의 회원이 되시면 다양한 이벤트와 스폐셜 혜택 등 회원들 만을 위한 더 많은 혜택을 만날 수 있습니다.
+                </div>
+            </div>
+        </section>
+        <!-- collaboration 영역-->
+        <section id="collaboration">
+            <div id="collab-top">
+                <h1>COLLABORATION</h1>
+                <div id="more-btn2">
+                    <a href="#">MORE</a>
+                </div>
+            </div>
+            <ul id="collab-list1">
+                <li>
+                    <div class="list-item">
+                        <img src="images/collab1-1.jpg" alt="list1">
+                        <img src="images/collab1-2.jpg" alt="list1">
+                        <img src="images/collab1-3.jpg" alt="list1">
+                        <p>asics x ballaholic</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item">
+                        <img src="images/collab2-1.jpg" alt="list2">
+                        <img src="images/collab2-2.jpg" alt="list2">
+                        <img src="images/collab2-3.jpg" alt="list2">
+                        <p>asics x halstudios</p>
+                    </div>
+                </li>
+                <li class="collab3">
+                    <div class="list-item">
+                        <img src="images/collab3-1.jpg" alt="list3">
+                        <img src="images/collab3-2.jpg" alt="list3">
+                        <img src="images/collab3-3.jpg" alt="list3">
+                        <p>asics x Sneaker Politics</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item">
+                        <img src="images/collab4-1.jpg" alt="list4">
+                        <img src="images/collab4-2.jpg" alt="list4">
+                        <img src="images/collab4-3.jpg" alt="list4">
+                        <p>asics x jjjjound</p>
+                    </div>
+                </li>
+            </ul>
+            <ul id="collab-list2">
+                <li>
+                    <div class="list-item">
+                        <img src="images/collab5-1.jpg" alt="list5">
+                        <img src="images/collab5-2.jpg" alt="list5">
+                        <img src="images/collab5-3.jpg" alt="list5">
+                        <p>asics x Afew Gel-Lyte III</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item">
+                        <img src="images/collab6-1.jpg" alt="list6">
+                        <img src="images/collab6-2.jpg" alt="list6">
+                        <img src="images/collab6-3.jpg" alt="list6">
+                        <p>asics x I4p</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item">
+                        <img src="images/collab7-1.jpg" alt="list7">    
+                        <img src="images/collab7-2.jpg" alt="list7">    
+                        <img src="images/collab7-3.jpg" alt="list7">    
+                        <p>asics x viviennewestwood</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item">
+                        <img src="images/collab8-1.jpg" alt="list8">
+                        <img src="images/collab8-2.jpg" alt="list8">
+                        <img src="images/collab8-3.jpg" alt="list8">
+                        <p>asics x NU LABEL</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- 젤 카야노 14 소개 영역 -->
+        <section id="notice">
+            <p id="big-txt">
+                ASICS GEL™ KAYANO
+            </p>
+            <p id="small-txt">
+                아식스, 새롭게 탄생한 젤 카야노 14 공개
+            </p>
+            <div id="gel-img">
+                <img src="images/gel-kayano14.png" alt="젤 카야노 14">
+            </div>
+        </section>
+        <!-- best item 영역 -->
+        <section id="best-item">
+            <h1>BEST ITEM</h1>
+            <div id="color-item">
+                <div id="item-img">
+                    <div class="white">
+                        <img src="images/best-white.png" alt="화이트">
+                    </div>
+                    <div class="silver" style="display: none;">
+                        <img src="images/best-silver.png" alt="실버">
+                    </div>
+                    <div class="black" style="display: none;">
+                        <img src="images/best-black.png" alt="블랙">
+                    </div>
+                    <div class="pink" style="display: none;">
+                        <img src="images/best-pink.png" alt="핑크">
+                    </div>
+                    <div class="yellow" style="display: none;">
+                        <img src="images/best-yellow.png" alt="엘로우">
+                    </div>
+                    <div class="green" style="display: none;">
+                        <img src="images/best-green.png" alt="그린">
+                    </div>
+                    <div class="sky" style="display: none;">
+                        <img src="images/best-sky.png" alt="스카이">
+                    </div>
+                    <div class="beige" style="display: none;">
+                        <img src="images/best-beige.png" alt="베이지">
+                    </div>
+                </div>
+                <div id="item-colors">
+                    <div class="button-wrap">
+                        <button class="circle1" onclick="changeImage(1)"></button>
+                        <button class="circle2" onclick="changeImage(2)"></button>
+                        <button class="circle3" onclick="changeImage(3)"></button>
+                        <button class="circle4" onclick="changeImage(4)"></button>
+                        <button class="circle5" onclick="changeImage(5)"></button>
+                        <button class="circle6" onclick="changeImage(6)"></button>
+                        <button class="circle7" onclick="changeImage(7)"></button>
+                        <button class="circle8" onclick="changeImage(8)"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- men, women, sports 영역 -->
+        <section id="products">
+            <div id="products-img">
+                <div>
+                    <img src="images/detail-men.jpg" alt="men">
+                    <p>MEN</p>
+                </div>
+                <div>
+                    <img src="images/detail-women.jpg" alt="women">
+                    <p>WOMEN</p>
+                </div>
+                <div>
+                    <img src="images/detail-sports.jpg" alt="sports">
+                    <p>SPOTRTS</p>
+                </div>
+            </div>
+            <div id="more-btn3">
+                <a href="#">MORE</a>
+            </div>
+        </section>
+        <!-- 푸터 영역 -->
+        <section id="footer">
+            <ul id="footer-wrap">
+                <li id="ft-logo">
+                    <a href="#">
+                        <img src="images/logo.png" alt="아식스 푸터로고">
+                    </a>
+                </li>
+                <ul class="menu-list">
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">문의하기</a></li>
+                    <li><a href="#">주문조회</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">사이즈가이드</a></li>
+                </ul>
+                <ul class="menu-list">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">ABOUT ASICS</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Carbon</a></li>
+                    <li><a href="#">Footprint</a></li>
+                    <li><a href="#">More Every Mind</a></li>
+                </ul>
+                <li class="menu-list">사이트 맵</li>
+                <li class="menu-list">매장찾기</li>
+                <!-- <li id="ft-menu">
+                </li> -->
+                <ul id="ft-info">
+                    <ul class="info-list">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">쿠키규정</a></li>
+                        <li><a href="#">아식스코리아 개인정보처리방침</a></li>
+                    </ul>
+                    <li class="info-list">고객상담실 :&nbsp;<span>080-929-3535</span> <span>080-940-3535</span></li>
+                    <li class="info-list">운영시간 : 월~금 AM 10:00 ~ PM 17:00</li>
+                    <li class="info-list">점심시간 : PM 12:00 ~ PM 13:00</li>
+                    <li class="info-list">*공휴일은 고객상담실 휴무입니다</li>
+                </ul>
+            </ul>
+            <div id="footer-copyright">
+                <ul class="copy">
+                    <li class="first">(주) 아식스코리아</li>
+                    <li>대표: 김원무</li>
+                    <li>주소: 서울특별시 중구 을지로5길 16(삼화타워) 14F</li>
+                    <li>고객 상담실 : (080) 930-3535 사업자등록번호 : 109-86-10809</li>
+                    <li class="first">통신판매신고번호 : 2018-서울중구-0740</li>
+                    <li>E-mail : customercare-kr@asics.com</li>
+                    <li><a href="#">사업자 정보 확인</a></li> <br>
+                    <li class="first">ⓒ 2020 ASICS Korea</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
