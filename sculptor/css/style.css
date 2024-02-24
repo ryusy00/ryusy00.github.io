@@ -2925,11 +2925,6 @@ body {
     }
     
 }
-@media all and (max-width:414px) {
-    .contents > img {
-        width: 240px;
-    }
-}
 @media all and (max-width:425px) {
     .m-banner {
         height: 800px;
