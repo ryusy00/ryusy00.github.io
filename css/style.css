@@ -380,7 +380,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
 .education ul li {white-space: nowrap; line-height: 170%;}
 .license { margin-top: 8%;}
 .license > ul > li > span { display: inline-block; width: 110px;}
-.licens > ul > li {line-height: 170%;}
+.license > ul > li { line-height: 170%;}
 
 /* SW SKILLS */
 .skills { margin-top: 8%;}
@@ -1117,7 +1117,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
 }
 .plan-txt > ul > li > h3 {padding-left: 2%;font-size: 1.8em;}
 .plan-txt > ul { padding-left: 7%; }
-.plan-txt > ul > li{ padding-bottom: 15%;}
+.plan-txt > ul > li { padding-bottom: 20%;}
 .plan-txt > ul > li > p {font-size: 1.5rem; line-height: 150%; padding-top: 3%;}
 
 #personal-design {
