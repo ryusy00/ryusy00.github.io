@@ -1116,8 +1116,8 @@ svg { transition: width 0.7s ease; z-index: 1;}
     font-size: 12px;
 }
 .plan-txt > ul > li > h3 {padding-left: 2%;font-size: 1.8em;}
-.plan-txt > ul{padding-left: 7%;}
-.plan-txt > li{ padding-bottom: 12%;}
+.plan-txt > ul {padding-left: 7%;}
+.plan-txt > ul > li{ padding-bottom: 12%;}
 .plan-txt > ul > li > p {font-size: 1.5rem; line-height: 150%; padding-top: 3%;}
 
 #personal-design {
