@@ -39,8 +39,8 @@ body {
     width: auto; margin-right: 25px;
     line-height: 30px; color: #000;
 }
-#nav li:hover { background-color: rgba(0, 0, 0, 0.2);}
-#nav ul li a { 
+#nav > ul > li:hover { background-color: rgba(0, 0, 0, 0.2);}
+#nav > ul > li > a { 
     background-color: transparent; 
     transition: background-color 0.3s ease;
 }
@@ -376,8 +376,8 @@ svg { transition: width 0.7s ease; z-index: 1;}
 #pf-right > div > ul { padding-top: 5%; padding-left: 3%; font-size: 1.4rem; list-style: none; }
 #pf-right div { padding-top: 0; line-height: 150%;}
 .education { margin-top: 8%;}
-.education span { display: inline-block; width: 200px;}
-.education ul li {white-space: nowrap; line-height: 170%;}
+.education > ul > li > span { display: inline-block; width: 200px;}
+.education > ul > li {white-space: nowrap; line-height: 170%;}
 .license { margin-top: 8%;}
 .license > ul > li > span { display: inline-block; width: 110px;}
 .license > ul > li { line-height: 170%;}
@@ -2169,7 +2169,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .profile-txt > ul > li  {
         font-size: 1.5rem;
     }
-    .education span {
+    .education > ul > li > span {
         width: 175px;
     }
     .design {
@@ -2434,7 +2434,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .education {
         margin-top: 15%;
     }
-    .education span {
+    .education > ul > li > span {
         width: 145px;
     }
     .education > ul > li {
@@ -3420,7 +3420,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .card-top {
         height: 45%;
     }
-    .education span {
+    .education > ul > li > span {
         width: 180px;
     }
     #pf-right > div > ul {
@@ -3825,7 +3825,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .profile-img > img {
         width: 240px;
     }
-    .education span {
+    .education > ul > li > span {
         width: 150px;
     }
     #navigation {
@@ -4150,7 +4150,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
         margin-top: -4%;
         padding: 0;
     }
-    .education span {
+    .education > ul > li > span {
         width: 150px;
     }
     .introduce {
@@ -4468,7 +4468,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #navigation > ul > li > a {
         font-size: 1.3rem;
     }
-    .license ul {
+    .license > ul {
         margin-left: 5%;
     }
     #graphic-work p {
@@ -4503,7 +4503,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #pf-right > div > ul {
         font-size: 0.95rem;
     }
-    .education span {
+    .education > ul > li > span {
         width: 130px;
     }
     .license > ul > li {
@@ -4808,7 +4808,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #pf-right > div > ul {
         font-size: 0.9rem;
     }
-    .education span {
+    .education > ul > li > span {
         width: 120px;
     }
     .sw-skill {
@@ -5244,7 +5244,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #profile-box {
         height: 95%;
     }
-    .education span {
+    .education > ul > li > span {
         width: 115px;
     }
     .profile-img > img {
@@ -5394,7 +5394,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .profile-txt {
         padding: 3px;
     }
-    .education span {
+    .education > ul > li > span {
         width: 110px;
     }
     .emoticon-about {
