@@ -1670,13 +1670,13 @@ svg { transition: width 0.7s ease; z-index: 1;}
     /* justify-content: center; */
 }
 .contact-txt {
-    padding-left: 10%;
+    padding-left: 13%;
     width: 30%; 
     font-family: 'Libre Baskerville', serif;
     font-weight: 300;
     color: #fff; font-size: 4rem;
 }
-.contact-txt h1 {font-size: 1.3em;}
+.contact-txt > h1 {font-size: 1.6em;}
 .contact-card {
     background-image: url("../images/businesscard-img.png"), url("../images/businesscard-img.png"), url("../images/businesscard-img.png");
     margin-top: 7%;
@@ -2306,7 +2306,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .contact-txt {
         width: 26%;
     }
-    .contact-txt h1 {
+    .contact-txt > h1 {
         font-size: 1.1em;
     }
     .contact-card {
@@ -2884,7 +2884,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
         margin-top: 19%;
         background-size: 800px auto;
     }
-    .contact-txt h1 {
+    .contact-txt > h1 {
         font-size: 1.3em;
     }
     #pf-right > div > ul {
@@ -3882,7 +3882,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #graphic{
         height: 1500px;
     }
-    .contact-txt h1 {
+    .contact-txt > h1 {
         font-size: 1.1em;
     }
     #folder-graphic::after {
@@ -3956,7 +3956,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .profile-txt > ul > li {
         font-size: 1.1rem;
     }
-    .contact-txt h1 {
+    .contact-txt > h1 {
         font-size: 1.1em;
     }
     .contact-card {
@@ -4039,7 +4039,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .btn1 a, .btn2 a, .btn3 a {
         font-size: 1.4rem;
     }
-    .contact-txt h1 {
+    .contact-txt > h1 {
         font-size: 5rem;
     }
     .contact-card {
@@ -4646,7 +4646,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .folder-emoticon {
         width: 155%;
     }
-    .contact-txt h1 {
+    .contact-txt > h1 {
         font-size: 4.3rem;
     }
     #purpose > p, #purpose2 > p {
@@ -5284,7 +5284,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .ability {
         margin-top: 22%;
     }
-    .contact-txt h1 {
+    .contact-txt > h1 {
         font-size: 3.7rem;
     }
     .card-top {
@@ -5360,7 +5360,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #pf-right > div > ul {
         font-size: 0.75rem;
     }
-    .contact-txt h1 {
+    .contact-txt > h1 {
         font-size: 3.5rem;
     }
     .folder-emoticon {
@@ -6357,7 +6357,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #contact {
         height: 625px;
     }
-    .contact-txt h1 {
+    .contact-txt > h1 {
         font-size: 2.6rem;
     }
     .contact-card {
