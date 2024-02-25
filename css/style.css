@@ -4177,6 +4177,15 @@ svg { transition: width 0.7s ease; z-index: 1;}
     #asics-tesktop > img {
         width: 500px;
     }
+    .circle-pink, .circle-blue {
+        left: 45px;
+    }
+    .circle-purple, .circle-gray {
+        left: 90px;
+    }
+    .circle-white, .circle-white2 {
+        left: 135px;
+    }
 }
 @media screen and (max-width: 550px) {
     .btn1 a, .btn2 a, .btn3 a {
@@ -5463,6 +5472,9 @@ svg { transition: width 0.7s ease; z-index: 1;}
     .folder-emoticon::after {
         border-radius: 10px;
         height: 30px;
+    }
+    .circle-black, .circle-black2 {
+        left: 10px;
     }
     .circle-pink {
         left: 45px;
