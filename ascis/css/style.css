@@ -101,7 +101,7 @@ body {
 #sns > ul {
     display: flex;
 }
-#sns span {
+#sns > ul > li > span {
     display: none;
 }
 #sns > ul > li:nth-child(1) {
@@ -144,14 +144,14 @@ body {
     display: flex;
     align-items: center;
 }
-#nav-btn span {
+#nav-btn > a > span {
     transform: rotate(180deg);
     width: 70%;
     color: #0d3273;
     font-size: 1.3rem;
     font-weight: 500;
 }
-#nav-btn img {
+#nav-btn > a > img {
     display: block;
     width: 35px;
     height: 35px;
@@ -235,13 +235,13 @@ body {
 .banner2-products > li {
     margin-right: 40px;
 }
-.product img {
+.product > a > img {
     display: block;
     width: 230px;
     height: auto;
     padding-bottom: 10px;
 }
-.product span {
+.product > a > span {
     text-align: center;
     font-size: 1rem;
     line-height: 25px;
