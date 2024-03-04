@@ -92,27 +92,17 @@ $(document).ready(function() {
       $('.exp-txt').removeClass('border-animation4');
       isAnimating3 = false;
     }
-    // if (currentScrollPosition > scrollPositionToStartAnimation) {
-    //   $('.hello').removeClass('border-animation');
-    //   $('.experience-title').removeClass('border-animation2');
-    //   $('.ability-title').removeClass('border-animation3');
-    //   $('.exp-txt').removeClass('border-animation4');
 
-    // }
-
-    if (!isAnimating2 && currentScrollPosition >=scrollPositionToStartAnimation) {
+    if (!isAnimating2 && currentScrollPosition >= scrollPositionToStartAnimation) {
       isAnimating3 = true;
       $('.hello').fadeIn(700,function() {
         $(this).addClass('border-animation');
-        // isAnimating3 = false;
       });
       $('.experience-title').delay(100).fadeIn(700,function() {
         $(this).addClass('border-animation2');
-        // isAnimating3 = false;
       });
       $('.ability-title').delay(200).fadeIn(700,function() {
         $(this).addClass('border-animation3');
-        // isAnimating3 = false;
       });
       $('.exp-txt').delay(300).fadeIn(700,function() {
         $(this).addClass('border-animation4');
@@ -121,44 +111,6 @@ $(document).ready(function() {
     }
   });
 });
-// var isAnimating3 = false;
-
-// $(window).scroll(function() {
-//   var currentScrollPosition = $(window).scrollTop();
-
-//   if (isAnimating3) {
-//     return;
-//   }
-
-//   var scrollPositionToStartAnimation = $('.ability').offset().top - $(window).height();
-
-//   if (currentScrollPosition < scrollPositionToStartAnimation) {
-//     $('.hello').removeClass('border-animation');
-//     $('.experience-title').removeClass('border-animation2');
-//     $('.ability-title').removeClass('border-animation3');
-//     $('.exp-txt').removeClass('border-animation4');
-//     isAnimating3 = false;
-//   }
-
-//   if (!isAnimating3 && currentScrollPosition >= scrollPositionToStartAnimation) {
-//     isAnimating3 = true;
-
-//     $('.hello').animate({ opacity: 1 }, 700, function() {
-//       $(this).addClass('border-animation');
-//       $('.experience-title').delay(100).animate({ opacity: 1 }, 700, function() {
-//         $(this).addClass('border-animation2');
-//         $('.exp-txt').delay(100).animate({ opacity: 1 }, 700, function() {
-//           $(this).addClass('border-animation4');
-//           $('.ability-title').delay(100).animate({ opacity: 1 }, 500, function() {
-//             $(this).addClass('border-animation3');
-//             isAnimating3 = false;
-//           });
-//         });
-//       });
-//     });
-//   }
-// });
-
 
 
 // 웹 포트폴리오 탭 메뉴

@@ -46,3 +46,14 @@ table {
 	border-spacing: 0;
 }
 a{ text-decoration: none;}
+label {
+	display: block;
+	font:
+	  1rem 'Noto Sans KR',
+	  sans-serif;
+}
+  
+input,
+label {
+	margin: 0.4rem 0;
+}

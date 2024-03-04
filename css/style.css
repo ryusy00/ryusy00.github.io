@@ -379,8 +379,8 @@ svg { transition: width 0.7s ease; z-index: 1;}
 .education > ul > li > span { display: inline-block; width: 200px;}
 .education > ul > li {white-space: nowrap; line-height: 170%;}
 .license { margin-top: 8%;}
+.license > ul > li { white-space: nowrap; line-height: 170%;}
 .license > ul > li > span { display: inline-block; width: 110px;}
-.license > ul > li { line-height: 170%;}
 
 /* SW SKILLS */
 .skills { margin-top: 8%;}

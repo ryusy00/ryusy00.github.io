@@ -675,7 +675,8 @@ body {
 #winter-model2 {
     width: 100%; 
     height: 80%;
-    position: absolute; top: 10%;
+    position: absolute; 
+    top: 10%;
     z-index: 2;
 }
 .winter-hat {

@@ -116,7 +116,7 @@ $(document).ready(function() {
 });
 
 
-// 브랜드 스토리 버튼 효관
+// 브랜드 스토리 버튼 효과
 document.addEventListener('DOMContentLoaded', function() {
     const historyBoxes1 = document.getElementById('history-box1');
     const historyBoxes2 = document.getElementById('history-box2');
@@ -141,12 +141,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
+// 멤버십 패럴록스 스크롤링
 window.addEventListener('scroll', function() {
     var membershipSection = document.getElementById('membership');
     var membershipContent = document.querySelector('.parallax-content');
-    var membershipTxt = document.getElementById('membership-txt');
-    var membershipTitle = document.getElementById('membership-title');
 
     var membershipBottom = membershipSection.getBoundingClientRect().bottom;
     var membershipHeight = membershipContent.offsetHeight;
