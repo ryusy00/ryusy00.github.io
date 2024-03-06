@@ -852,7 +852,7 @@ svg { transition: width 0.7s ease; z-index: 1;}
 }
 .web-tooltip2 {
     visibility: hidden; 
-    width: 40%;
+    width: 43%;
     background-color: rgba(0, 0, 0, 0.8); 
     color: #fff;
     text-align: center;
