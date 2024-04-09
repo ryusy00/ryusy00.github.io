@@ -224,7 +224,7 @@ $(document).ready(function() {
     });
 });
 
-// afew-title 선 애니메이샨
+// afew-title line 애니메이션
 var isAnimating10 = false;
 $(document).ready(function() {
     $('.line3').removeClass('line-animation3');
